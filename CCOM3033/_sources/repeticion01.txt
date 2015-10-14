@@ -1,0 +1,241 @@
+Estructuras de repetición: while
+--------------------------------
+
+
+While es una estructura de repetición que mantiene repitiendo su bloque siempre que la expresión relacional sea cierta.
+
+
+.. activecode:: lc1
+   :language: cpp
+   :stdin: 0 1 2 3 4 5 6 7 8
+
+    // Programa Repeticion 1
+    #include <iostream>
+    using namespace std;
+
+    int main() {
+
+        int x;
+
+        cout << "Entre x: "; 
+        cin  >> x;
+
+        while ( x < 5 ) {
+            cout << "Entre x: " << endl; 
+            cin >> x;
+            cout << endl << "Usted entro: "
+                << x << endl;
+        }
+
+        cout << "Se acabo" << endl;
+        return 0;
+    }
+
+.. reveal:: revealid1
+    :showtitle: ¿Cuando el programa dejará de pedir datos al usuario?
+
+    Cuando el usuario entre algun número que **no** sea menor que 5. En otras palabras, cuando el usuario entre un número igual o mayor a 5.
+
+
+La siguiente figura muestra algunas partes importantes del ciclo while.
+
+.. figure:: while01.png
+   :align: center
+   :alt: image
+
+
+
+.. activecode:: lc1
+   :language: cpp
+
+    // Programa Repeticion 2
+    #include <iostream>
+    using namespace std;
+
+    int main() {
+
+        int n = 1;
+
+        while ( n < 15 ) {
+            cout << n << endl;
+            n = n * 2;
+        }
+
+        cout << "Se acabo" << endl;
+        return 0;
+    }
+
+.. reveal:: revealid1
+    :showtitle: ¿Cuántas iteraciones realiza el while en el programa anterior? 
+
+    El while realiza 4 iteraciones: la que imprime ``1``, ``2``, ``4`` y ``8``.
+
+A la variable(s) que son utilizadas para controlar si un while sigue dando vueltas o no, se le llama **Loop control variable(s)**. 
+
+#. En el programa 1, el **LCV** es la variable ``x``.
+
+#. En el programa 2, el **LCV** es la variable ``n``.
+
+Todo while bien estructurado debe cumplir con las siguientes criterios:
+
+#. Se debe haber asignado un valor al **LCV** antes del loop.
+
+    Por ejemplo, en el programa 1, antes de llegar a la instrucción while por primera vez, el **LCV** ``x`` contiene al valor que entró el usuario.
+
+#. El **LCV** debe utilizarse en una expresión relacional para determinar si el while realiza la próxima iteración.
+
+    Por ejemplo, en el programa 2, se utiliza la expresión relacional ``n < 15`` para determinar si el while realiza su próxima iteración.
+
+#. Dentro del bloque de instrucciones del while se debe actualizar el **LCV**. 
+
+    Por ejemplo, en el programa 1, se actualiza el valor de ``x`` con el valor entrado por el usuario (``cin >> x``).
+
+    En el programa 2, se actualiza el valor de ``n`` con el resultado de ``n = n * 2``.
+
+
+Una forma recomendada de mejorar nuestras destrezas de programación es estudiar patrones comúnmente utilizados en programas.
+
+
+Validación de inputs usando while
+=================================
+
+**Patrón 1**: Mientras el usuario entre dato(s) inválidos, le seguimos pidiendo.
+
+::
+
+    int n;
+    
+    cout << "Entre un numero en el rango [5,9]: ";
+    cin  >> n;
+
+    while ( n < 5 || n > 9) {
+        cout << "Entre un numero en el rango [5,9]: ";
+        cin  >> n;
+    }
+
+    cout << "Gracias." << endl;
+
+Importante: La expresión relacional del while debe ser **cierta** cuando el dato sea **invalido**.
+
+
+**Patrón 2**: Acumulemos números hasta que rebasemos cierta cantidad.
+
+    Ejemplo: Cuantos recíprocos de enteros positivos debo sumar para llegar a 12 (:math:`1 + \frac{1/2} + \frac{1/3} + \ldots  >= 12` )
+
+.. activecode:: lc1
+   :language: cpp
+
+    #include <iostream>
+    using namespace std;
+
+    int main() {
+
+        double total = 0;
+        int n = 0;
+
+        while ( total < 12) {
+            n = n + 1;
+            total = total + ( 1.0 / n );
+        }
+
+        cout << "Debemos sumar hasta 1 / " << n << endl;
+
+        return 0;
+    }
+
+En el patrón 2 vemos dos técnicas muy importantes en programación:
+
+* Un contador (*n* en programa pasado) es una variable que se incrementa o decrementa en la misma cantidad en cada iteración del loop.
+
+* Un acumulador (*total* en el programa pasado) es una variable que acumula la suma de valores asumidos por otra variable durante las iteraciones de un loop. 
+
+
+.. activecode:: lc1
+   :language: cpp
+   :stdin: 0 10 8 7 1 8 2 3
+
+    #include <iostream>
+    using namespace std;
+
+    int main() {
+
+        const int CUPO  = 30;
+        double totalEst = 0;
+        int estudiantes = 0;
+
+        cin >> estudiantes;
+        totalEst = estudiantes;
+
+        while ( totalEst < CUPO) {
+            cin >> estudiantes;
+            totalEst = totalEst + estudiantes;
+        }
+
+        cout << "Se lleno la clase con "
+             << totalEst << " estudiantes " << endl;
+
+        return 0;
+    }
+
+
+Do-while
+========
+
+Estructura de repetición donde la condición se verifica **al final** de cada iteración.
+
+.. figure:: dowhile01.png
+   :align: center
+   :alt: image
+
+.. figure:: dowhile02.png
+   :align: center
+   :alt: image
+
+
+.. activecode:: lc1
+   :language: cpp
+   :stdin: 100 0 -5 23 10 19 1
+
+    #include <iostream>
+    using namespace std;
+
+    int main() {
+        
+        int x;
+
+        do {
+
+            cout << "Entre un num en rango [5,15]:";
+            cin  >> x;
+            cout << endl << "Usted entro: " << x << endl;
+        
+        } while ( x < 5  || x > 15);
+
+        cout << "Felicidades, sabes seguir instrucciones" << endl;
+    
+        return 0;
+    }
+
+
+Hand tracing
+============
+
+Técnica utíl para analizar y depurar código.
+
+
+Determinar si un número es primo. Supón que escuchaste por ahí que:
+
+    Un primo solamente es divisible entre si mismo y uno. Podemos verificar si un entero es primo dividiendo entre todos los números desde 2 hasta la raiz cuadrada del entero. Por ejemplo: 19 es primo por que no es divisible ni por 2, 3, 4,
+
+
+Vamos a depurar el siguiente pseudocódigo usando hand tracing. 
+
+::
+    
+    Input: n, un entero positivo
+    Output: true si es primo
+    =================================
+    1. d = 2
+    2. while ( d < sqrt(n) ):
+    3.     if n % d == 0: return false
+    4.     d = d + 1

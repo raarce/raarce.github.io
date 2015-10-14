@@ -1,0 +1,74 @@
+=====================
+CCOM3033 - B51
+=====================
+
+
+Posible implementación
+----------------------
+
+
+.. activecode:: lc1
+   :language: cpp
+
+    // En este programa de prueba implementamos la función 
+    // separarEnDos, un unit test para ella y un main para que 
+    // invoque el unit test.
+
+    #include <iostream>
+    #include <string>
+    #include <cassert>
+
+    using namespace std;
+
+
+    // funcion separarEnDos:
+    // Dado un string que contiene dos substrings separados por espacios
+    // devolver los dos substrings (nombre y apellido).
+
+    void separarEnDos(const string &st, string &nombre, string &apellido) {
+      unsigned int pos, len;
+      
+      pos = st.find(" ");
+      len = st.length();
+
+      // El largo del nombre equivale a la posición
+      // Por ejemplo, en "Tito T" el espacio está en la pos 4 y el nombre
+      // tiene 4 letras.
+      nombre   = st.substr(0, pos);
+
+
+      // El apellido está en los indices pos+1 .. len-1, esto equivale
+      // a un largo de len - 1 - (pos + 1) + 1 = len - pos - 1
+      apellido = st.substr(pos+1, len - pos + 1);
+    }
+
+    // función test_separarEnDos:
+    // Unit test para la función separarEnDos
+
+    void test_separarEnDos() {
+      string nombre, apellido;
+
+      separarEnDos("Walter Baez", nombre, apellido);
+      assert(nombre == "Walter" && apellido == "Baez");
+
+      separarEnDos("Tito T", nombre, apellido);
+      assert(nombre == "Tito" && apellido == "T");
+
+      separarEnDos("Y M", nombre, apellido);
+      assert(nombre == "Y" && apellido == "M");
+
+      separarEnDos("C 3PO", nombre, apellido);
+      assert(nombre == "C" && apellido == "3PO");
+
+      cout << "separarEnDos paso todas las pruebas!" << endl;
+    }
+
+    // funcion main: 
+    // Simplemente invoca el unit test.
+
+    int main() {
+      test_separarEnDos();
+      return 0;
+    }
+
+

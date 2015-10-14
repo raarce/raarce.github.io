@@ -1,0 +1,148 @@
+Asignación 
+--------------------------------
+
+Ejercicio 01: Oruga en un pozo
+==============================
+
+Una oruga ha caido en un pozo de 6 pies de profundo y quiere subir a la superficie. La oruga puede subir 3 pies cuando hay sol, pero se desliza 1 pie hacia abajo cuando está durmiendo de noche. La oruga tiene un factor de fatiga de 10%, lo que significa que cada día puede 10% x 3 = 0.3 pies menos que el día anterior (la distancia perdida por fatiga es siempre 10% de la distancia que podía subir el primer día). ¿En qué día la oruga sale del pozo, i.e. cuál es el primer día en que la altura de la oruga excede 6 pies (un día consisite de un periodo de sol seguido de un periodo de noche). Como puedes ver en la siguiente table la oruga sale del poso durante el dia 3.
+
+
+=== ============== =============== ========================== ===============================
+Dia Altura inicial Distancia subió Distancia despues de subir Distancia después de deslizarse
+=== ============== =============== ========================== ===============================
+1   0'             3'              3'                         2'
+2   2'             2.7'            4.7'                       3.7'
+3   3.7'           2.4'            6.1'                       -  : salió del poso
+=== ============== =============== ========================== ===============================
+
+Si el factor fatiga hace que la distancia a subir sea menor que cero, la oruga no sube ese día.  Sin importar cuanto sube la oruga, siempre se desliza hacia abajo por la misma cantidad cada noche.
+
+Esta ejercicio consiste de resolver el problema de la oruga en el pozo de forma general.  Es decir, dado la altura del pozo, la cantidad que sube, la cantidad que desliza y el factor de fatiga, nuestro programa determinará en que día la oruga alcanza salir del pozo. Puede que dados los parámetros la oruga nunca salga del pozo. En tal caso el programa debe indicar en que día la oruga "pasa del fondo" del pozo.
+
+Ejemplo:
+
+=== ============== =============== ========================== ===============================
+Dia Altura inicial Distancia subió Distancia despues de subir Distancia después de deslizarse
+=== ============== =============== ========================== ===============================
+1   0'             1'              1'                         0'
+2   0'             0.90'           0.90'                      -0.10'   : paso del fondo
+=== ============== =============== ========================== ===============================
+
+
+A continuación proveemos un esqueleto del programa con un unit test que hace varias pruebas para determinar la validez de la función ``diasSalir``. Solo tienes que implementar la función ``diasSalir``.  Lee bien la documentación de la función para que entiendas lo que debe devolver.
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <cassert>
+   using namespace std;
+   
+   // Dado la altura del pozo, cantidad que sube, cantidad que  baja,
+   // y factor fatiga, computara el numero de dias que tardara
+   // en salir del pozo. Si es imposible salir, devolvera el negativo
+   // del número de dias en bajo más allá del fondo.
+   
+   int diasEnSalir(float alturaPozo, float sube,
+      float baja, float factorFatiga) {
+
+      return 0;
+   
+   }
+
+   void test_diasEnSalir() {
+       assert(diasEnSalir(6,3,1,0.10) == 3);
+       assert(diasEnSalir(10,2,1,0.50) == -4);
+       assert(diasEnSalir(50,5,3,0.14) == -7);
+       assert(diasEnSalir(50,6,4,0.01) == -68);
+       assert(diasEnSalir(50,6,3,0.01) == 20);
+       assert(diasEnSalir(1,1,1,0.01) == -2);
+   
+       cout << "Paso todas la pruebas!!!" << endl;
+   }
+   
+   
+   int main() {
+       test_diasEnSalir();
+       return 0;
+   }
+
+
+
+Ejercicio 02: Raices enteras
+============================
+
+Una de las operaciones utilizadas en criptografía es encontrar las raices enteras de números enteros usando operadores modulares. Por ejemplo, dado m = 15, n = 5, p = 17  ¿cuál es el número que elevado a la 5 es igual a 15 (usando operaciones modulo 17)?. En otras palabras, dado m, n y p, determinar k tal que :math:`(k^n)\,mod\, p = m` .  Complete la función ``raizEntera`` para que implemente dicha funcionalidad. Vea la documentación de la función para que entienda sus parámetros y valores de retorno.
+
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <cassert>
+   using namespace std;
+
+   // Dado dos enteros positivos m y n y p tal que 
+   // existe una k  para que (k^n)%p = m. 
+   // Determina y devuelve el valor de k.
+   
+   unsigned int raizEntera( unsigned int m, unsigned int n, 
+                            unsigned int p) {
+       return 0;
+   }
+   
+   void test_raizEntera() {
+       assert(raizEntera(4, 5, 7) == 2);    // (2^5)%7 = 4
+       assert(raizEntera(45, 7, 47) == 10); // (10^7)%47 = 45
+       assert(raizEntera(2, 9, 83) == 6);   // (6^9)%83 = 2
+       assert(raizEntera(30, 5, 89) == 19); // (19^5)%89 = 30
+       assert(raizEntera(1, 7, 89) == 1);   // (1^7)%89 = 1
+       cout << "Paso todas la pruebas!!!" << endl;
+   }
+
+   int main() {
+       test_raizEntera();
+       return 0;
+   }
+
+
+Ejercicio 03: Generadores
+=========================
+
+La suma de digitos de un entero positivo n se define como la suma del n y sus dígitos. Por ejemplo, la suma de dígitos del 216 es: 
+:math:`198 + 1 + 9 + 8= 216`
+
+Cuando *m* es la suma de dígitos de *n*, decimos que *n* es un generador de *m*. Por ejemplo, 198 es un generador de 216. Otro ejemplo, 245 es un generador de 256 (pues :math:`245 + 2 + 4 +  5 = 256`). 
+
+Algunos números **no** tienen generador. Algunos números tienen más de un generador. Por ejemplo, los generadores de 216 son 198 y 207.
+
+Complete la función minGenerador para que dado un numero *m* devuelva su minimo generador. Si no tiene generador devolverá 0.
+
+
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <cassert>
+   using namespace std;
+   
+   unsigned int minGenerador(unsigned int m) {   
+       return 0;    
+   }
+   
+   void test_minGenerador() {
+       assert( minGenerador(216)  == 198);
+       assert( minGenerador(121)  == 0);
+       assert( minGenerador(2005) == 1979);
+       assert( minGenerador(99)   == 90);
+       assert( minGenerador(1987)   == 1970);
+       assert( minGenerador(42)   == 0);
+       
+       cout << "Paso las pruebas!!!!" << endl;
+   }
+   
+   int main() {
+       test_minGenerador();
+       return 0;
+   }

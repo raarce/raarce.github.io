@@ -1,0 +1,415 @@
+=====================
+CCOM3033 - B51
+=====================
+
+
+
+Objetos
+-------
+* Si una variable es como una caja abierta a la que podemos leer y escribir un solo dato, un **objeto** es una caja en esteroides!.
+* Dentro de si puede guardar valores de muchos tipos diferentes.
+* Tiene ranuras que nos permiten insertar valores y asignarlos a los datos que guarda dentro de si.
+* Tiene dispensadores que nos permiten obtener los valores de los datos que guarda dentro de si.
+* Tiene botones, manijas, y otros controles que nos permiten realizar operaciones sobre esos valores que guarda adentro
+* Por lo general es cerrada (no permite tocar directamente los datos, nuestra manera de trabajar con los datos es a traves de los botones y otros controles del interface)
+* Encapsula en un solo paquetito los datos y las acciones que podemos tomar sobre ellos 
+* Cada objeto es de una **clase**.
+
+
+.. figure:: variable.png
+   :align: center
+   :alt: image
+
+
+.. figure:: funcion.png
+   :align: center
+   :alt: image
+
+
+.. figure:: objeto.png
+   :align: center
+   :alt: image
+
+
+.. figure:: clase.png
+   :align: center
+   
+   Una clase
+
+
+
+
+
+En un mundo sin objetos
+-----------------------
+
+
+ .. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+
+   double probDia(int edad, int peso, double glucosa, double presion) {
+       double prob;
+       // . . . un computo milagroso
+       return prob;
+   }
+
+   int main() {
+       unsigned int edadA, pesoA;
+       double gluA, presA, probDiabetesA;
+
+       unsigned int edadB, pesoB;
+       double gluB, presB, probDiabetesB;
+
+       cin >> edadA >> pesoA >> gluA >> presA;
+       cin >> edadB >> pesoB >> gluB >> presB;
+
+       probDiabetesA = probDia(edadA, pesoA, gluA, presA);
+       probDiabetesB = probDia(edadB, pesoB, gluB, presB);
+
+       // . . . desplegar algo  . . . 
+       return 0;
+   }
+
+
+Objetos
+-------
+
+[From Gaddis]
+
+Procedural programming worked well for software developers for many years. However , as programs become larger and more complex, the separation of a programs data and the code that operates on the data can lead to problems. 
+
+
+For example, the data in a procedural program are stored in variables, as well as more complex structures that are created from variables. The procedures that operate on the data must be designed with those variables and data structures in mind. But, what happens if the format of the data is altered? Quite often, a program's specifications change, resulting in redesigned data structures. When the structure of the data changes, the code that operates on the data must also change to accept the new format. This results in additional work for programmers and a greater opportunity for bugs to appear in the code.
+
+Objeto
+------
+
+* Una entidad de software que contiene atributos (datos) y procedimientos (funciones).
+
+* En C++: data members, function members.
+
+
+Por qué son cool?
+-----------------
+* Nos permiten encapsular diversas propiedades de un ente y las operaciones que podemos realizar en un solo lugar.
+
+* Así toda la información que deseamos manejar de un ente está encapsulada en vez de dispersa como estaría si usamos variables. 
+
+* Alteraciones a código se hacen en una sola estructura, en vez de en datos y funciones separadas.
+
+Creación de objetos
+-------------------
+
+
+(Asumiento que las clases Paciente y Ghost existen....)
+
+
+::
+  
+       Paciente pepon;
+
+       Ghost blinky, clyde, pinky, inky;
+
+
+Constructor
+-----------
+
+Cada clase define uno o varios métodos llamado *constructores* que son invocado automáticamente cada vez que definimos un objeto de una clase.
+
+::
+  
+       Paciente pepon(15, 145, 19.4, 120.5);
+
+
+Los constructores de algunas clases pueden aceptar parámetros. Usualmente se utilizan para recibir los valores iniciales que se desea asignar a las propiedades del objeto. 
+
+
+Invocación de método
+--------------------
+
+::
+
+    pepon.setEdad(15);
+    cout << pepon.getPresion() << endl;
+
+
+En un mundo con objetos
+-----------------------
+
+* Cuando queremos representar algo que tiene multiples propiedades, en vez de trabajar con las propiedas como variables aisladas definimos una nueva tipo de dato capaz de encapsularlas todas juntas. También le asignamos métodos a la clase para que todo objeto de esa clase pueda realizar ciertas operaciones sobre esas propiedades. 
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+   
+   class Paciente {
+   
+   private:
+       unsigned int edad, peso;
+       double glucosa, presion;
+
+   public:
+       Paciente(int ed, int pe, double gl, double pr) {
+           edad = ed;
+           peso = pe;
+           glucosa = gl;
+           presion = pr;
+       }
+       double probDia() {
+           double prob;
+           // . . . un computo milagroso
+           return prob;
+       }       
+   };
+
+   int main() {
+       unsigned int edad, peso;
+       double glucosa, presion;
+       
+       cin >> edad >> peso >> glucosa >> presion;
+       Paciente A(edad, peso, glucosa, presion);
+
+       cin >> edad >> peso >> glucosa >> presion;
+       Paciente B(edad, peso, glucosa, presion);
+       
+       if ( A.probDia() > B.probDia() ) {
+            // . . . desplegar algo  . . . 
+       }
+       return 0;
+   }
+
+
+Aun la forma de asignar y leer los valores de las propiedades de un objeto es a **través de métodos**. 
+
+
+Usemos objetos predefinidos!!!
+------------------------------
+
+QPointF
+-------
+
+* http://doc.qt.io/qt-5.4/qpointf.html
+
+* ``#include <QPoint>``
+
+* Algunos constructores:
+    * QPointF()
+    * QPointF(qreal xpos, qreal ypos)
+
+* Getters
+    * qreal x() const
+    * qreal y() const
+
+* Setters
+    * void  setX(qreal x)
+    * void  setY(qreal y)
+
+* Otros métodos
+    * qreal manhattanLength() const 
+
+Ejemplo
+=======
+
+Crear una función ``distancia`` que determine la distancia entre dos puntos representados como objetos de clase QPointF()
+
+::
+
+    int main() {
+        double x, y;
+
+
+        // Pedir coordenadas de primer punto y crear objeto
+        cin >> x >> y;
+        QPoint p1(x,y);
+
+        // Pedir coordenadas de segundo punto y crear objeto
+        cin >> x >> y;
+        QPoint p2(x,y);
+
+        cout << "La distancia es: " << distancia(p1,p2) << endl;
+
+        return 0;
+    }
+
+string
+------
+
+* clase preferida en C++ para trabajar con cadenas de caracteres
+
+* http://www.cplusplus.com/reference/string/string/string/
+
+* ``#include <string>``
+
+* Algunas destrezas 
+
+    * creación de objeto
+
+        * ``string nombre;``
+
+        * ``string apodo("Cantalicio");``
+
+    * asignación de valor:
+
+      ``unNombre = "Cantalicio"``;
+
+    * comparación (todos los sigientes son ciertos):
+
+      ``if (unNombre > "Boberto")``
+
+      ``if ("leon" < "raton")``
+
+      ``if ("zorra" > "Antilope")``
+
+
+* Algunos métodos:
+    * `[ ]` : devuelve el caracter en la posición especificada
+
+       * `unNombre = "Cantalicio";`
+       
+       * `cout << unNombre[2] << endl; // outputs n`
+       
+       * `cout << unNombre[3] << endl; // outputs t`
+
+
+    * length(): devuelve el largo de string
+
+       unNombre = "Cantalicio";
+       cout << unNombre.length() << endl; // outputs 10
+
+    * substr(): devuelve un substring
+        * prototipo: ``string substr (size_t pos = 0, size_t len = npos) const;``
+
+          unNombre = "Cantalicio";
+          cout << unNombre.substr(3,4) << endl; // outputs tali
+
+
+    * find (algunos de los prototipos)
+        * ``size_t find (const string& str, size_t pos = 0) const;``
+        * ``size_t find (const char* s, size_t pos = 0) const;``
+        * ``size_t find (char c, size_t pos = 0) const;``
+
+
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <string>
+
+   using namespace std;
+
+   int main() {
+       string unNombre = "Cantalicio";
+
+       cout << unNombre.find("nt") << endl;
+
+       cout << unNombre.find("vida") << endl;
+
+       cout << "The value of constant npos: " << string::npos << endl;
+
+       cout << unNombre.find('a') << endl;
+
+
+       return 0;
+   }
+
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <string>
+
+   using namespace std;
+
+   // Dado un string no vacio, devuelve su ultima letra
+   char lastChar(const string &st) {
+
+   }
+
+   int main() {
+       string unNombre = "Cantalicio";
+
+       cout << lastChar(unNombre) << endl; 
+
+       cout << lastChar("Caguax") << endl;
+
+       return 0;
+   }
+
+
+
+Problem Solving (pasos recomendados por R. Arce Nazario)
+--------------------------------------------------------
+
+#. Entender el problema. ¿El input es suficiente para producir el output?
+
+#. Pensar en casos de prueba y su respuesta esperada. Considerar casos extremos.
+
+#. (Para los mismo casos de prueba) Resolver el problema manualmente tratado de limitarse a instrucciones comunes a lenguajes de programación (o para la cuales conozcas librerías)
+
+#. Tratar de generalizar la solución.
+
+#. Escribir como algoritmo.
+
+#. Implementar como programa.
+
+#. *Unit test it*.
+
+
+
+
+
+Ejercicios:
+-----------
+
+#. Hacer una función de prueba unitaria para validar alguno de los métodos de la clase ``string`` que no sea ``find``, e.g ``append``, ``at``,  ``copy``, ``empty``, etc.. Por ejemplo, a continuación un unit test para el método find.
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <string>
+   #include <cassert>
+
+   using namespace std;
+
+   // Dado un string no vacio, devuelve su ultima letra
+   void test_find() {
+       string st = "arbol";
+
+       assert( st.find('b') == 2 );
+       assert( st.find("ol") == 3 );
+       assert( st.find("a",2) == string::npos );
+       assert( st.find("arbol") == 0 );
+
+       cout << "find() passed all tests!!!!" << endl;
+
+   }
+
+   int main() {
+       test_find();
+       return 0;
+   }
+
+
+Ejercicios:
+-----------
+
+#. Escriba una función que dado un string que contiene nombre y apellido (separados por espacio), regrese nombre y apellido por separado.
+
+    ::
+  
+          Input: st, un string que contiene dos palabras separadas por espacio
+          Output: palabra1 y palabra2, las palabras
+          --------------------------------------------------------------------
+          1. pos = posición del espacio
+          2. len = largo de st
+          3. palabra1 = st[0..pos-1]
+          4. palabra2 = st[pos+1..len-1]
+          5. return palabra1 y palabra2

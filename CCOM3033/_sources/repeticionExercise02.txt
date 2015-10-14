@@ -1,0 +1,506 @@
+Ejercicio en clase : Estructuras de repetición for
+----------------------------------------------------
+
+Trabaje los siguientes ejercicios con su compañero(a) al estilo *pair programmming*, i.e. asumiendo roles de conductor y navegador, usando una sola computadora, intercambiando roles cada cierto tiempo.
+
+Al final deben someter a moodle todas las contestaciones a las preguntas que aparecen en los ejercicios, así como los códigos. Sugiero que según les funcionen los códigos los copien a un editor de texto para que no lo vayan a perder. Esta página no guarda código, solo sirve como interface para compilar sin tener que salir del navegador. 
+
+Demostración 1
+==============
+
+C++ provee operadores especiales para la tarea de incrementar una variable por 1 o decrementarla por uno. Vealos en acción en el próximo ejemplo.
+
+.. activecode:: lc1
+   :language: cpp
+
+    #include <iostream>
+    using namespace std;
+
+    int main() {
+
+        int i = 5;
+        
+        cout << "El valor de i es: " << i << endl;
+        i++;
+        cout << "Ahora es: " << i << endl;
+        i--;
+        cout << "Y ahora es: " << i << endl;
+        
+    }
+
+
+* ``i++`` es un atajo equivalente a ``i = i + 1`` 
+
+* ``i--`` es un atajo equivalente a ``i = i - 1``
+
+
+Presentando el ciclo for
+========================
+
+El ciclo ``for`` incorpora los tres criterios de los LCV (inicialización, comparación e actualización) en una sola instruccion.
+
+.. activecode:: lc1
+   :language: cpp
+
+    #include <iostream>
+    using namespace std;
+    
+    int main()
+    {
+        for (int i = 1; i < 10; i = i + 1) {
+            cout << i << " ";
+        }
+        cout << endl;
+
+        return 0;
+    }
+
+Al igual que toda estructura de repetición, el **for loop** debe seguir los criterios de **loop control variable**.
+
+.. reveal:: revealid1
+    :showtitle: ¿Cuál es el loop control variable en el programa pasado? 
+
+    El LCV es la variable ``i``.
+
+.. reveal:: revealid1
+    :showtitle: ¿Cuál es el valor inicial del LCV? 
+
+    El valor inicial de la variable ``i`` es en el primer parámetro del for loop, la parte que dice ``int i = 1``. Observe que podemos definir la variable dentro de los *parametros* del for.
+
+.. reveal:: revealid1
+    :showtitle: ¿Bajo qué condiciones se continua repitiendo el for? 
+
+    El for se repite siempre y cuando ``i < 10``. Observe que ``i < 10`` es el **segundo** *parámetro* que recibe el ``for``.
+
+.. reveal:: revealid1
+    :showtitle: ¿Cómo se actualiza el LCV en cada vuelta?
+
+    En cada vuelta, la variable se incrementa en 1, como lo establece el **tercer** *parámetro* del ``for``: ``i = i + 1``. 
+
+
+Ejercicio 1: Y ahora en reversa
+===============================
+
+Presentando el ciclo for.
+
+.. activecode:: lc1
+   :language: cpp
+
+    #include <iostream>
+    using namespace std;
+    
+    int main()
+    {
+        for (int i = 3; i >= 0; i = i - 1) {
+            cout << i << " ";
+        }
+        cout << endl;
+
+        return 0;
+    }
+
+
+**Problema 1**: ¿Cuál es el loop control variable en el programa pasado? 
+
+**Problema 2**: ¿Cuál es el valor inicial del LCV? 
+
+**Problema 3**: ¿Bajo qué condiciones se continua repitiendo el **for**? 
+
+**Problema 4**: ¿Cómo se actualiza el LCV en cada vuelta?
+
+**Problema 5**: ¿Cuál es el output del programa?
+
+
+
+
+
+Ejercicio 2
+===========
+
+Modifique el siguiente programa para que imprima ``1, 4, 7, 10, 13, ...., 64``.
+
+.. activecode:: lc1
+   :language: cpp
+
+    #include <iostream>
+    using namespace std;
+    
+    int main()
+    {
+        for (int i = 1; i < 10; i = i + 1) {
+            cout << i << " ";
+        }
+        cout << endl;
+
+        return 0;
+    }
+
+
+Ejercicio 3
+===========
+
+Modifique el siguiente programa para que imprima ``3, 9, 27, 81, 243``
+
+.. activecode:: lc1
+   :language: cpp
+
+    #include <iostream>
+    using namespace std;
+    
+    int main()
+    {
+        for (int i = 1; i < 10; i = i + 1) {
+            cout << i << " ";
+        }
+        cout << endl;
+
+        return 0;
+    }
+
+
+Ejercicio 4
+===========
+
+Modifique el siguiente programa para que imprima ``1, -2, 4, -8, 16, -32, 64``
+
+.. activecode:: lc1
+   :language: cpp
+
+    #include <iostream>
+    using namespace std;
+    
+    int main()
+    {
+        for (int i = 1; i < 10; i = i + 1) {
+            cout << i << " ";
+        }
+        cout << endl;
+
+        return 0;
+    }
+
+Solo observe y aprenda
+======================
+
+Considere el siguiente programa. Analícelo para entender su output, luego ejecute para corroborar sus resultados.
+
+
+.. activecode:: lc1
+   :language: cpp
+
+    #include <iostream>
+    using namespace std;
+    
+    int main()
+    {
+        for (int i = 0; i < 5; i++) {
+            cout << "*";
+        }
+        cout << endl;
+
+        return 0;
+    }
+
+Solo observe y aprenda
+======================
+
+Considere el siguiente programa. Analice para entender su output, luego ejecute para corroborar sus resultados. El programa ilustra que podemos usar LCVs de tipo real.
+
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+   
+   int main()
+   {
+       cout << "Numero\tCuadrado" << endl;
+       cout << "------\t--------" << endl;
+
+       for (double i = 1.0; i <= 4.0; i = i + 0.25) {
+           cout << i << "\t" << i*i << endl;
+       }
+       
+       cout << "*******\t*******" << endl;
+
+       return 0;
+   }
+
+
+
+Loops anidados
+==============
+
+Así se le conoce cuando incluimos un loop dentro del bloque de otro loop.
+
+Considere el siguiente programa. Analice para entender su output, luego ejecute para corroborar sus resultados. 
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+   
+   int main()
+   {
+       for (int i = 0; i < 5; i++) {
+           cout << "i : " << i << endl; 
+
+           for (int j = 0; j < 3; j++) {
+               cout << "    j : " << j << endl;
+           }    
+
+       }
+   }
+
+.. reveal:: revealid1
+    :showtitle: ¿Cuál es el loop control variable en el programa pasado? 
+
+    El pasado programa contiene 2 loop control variables. 
+    El LCV del loop **externo** es la variable ``i``.
+    El LCV del loop **interno** es la variable ``j``.
+
+.. reveal:: revealid1
+    :showtitle: ¿Qué valores de i se generan a través del programa? 
+
+    Se generan los siguientes valores de ``i``: ``0, 1, 2, 3, 4, 5``. El valor de ``5`` es el que hace que el loop deje de iterar.
+
+.. reveal:: revealid1
+    :showtitle: ¿Qué valores de j se generan para cada uno de los valores de i ? 
+
+    Se generan los siguientes valores de ``j`` **para cada iteración del loop externo** : ``0, 1, 2, 3``. El valor de ``3`` es el que hace que el loop interno deje de iterar.
+
+.. reveal:: revealid1
+    :showtitle: ¿Cómo describirías el programa pasado ? 
+
+    El programa pasado consiste de dos loops anidados. El **externo** itera 5 veces. Por cada una de las iteraciones del ciclo externo, el ciclo **interno** itera 3 veces.
+
+.. reveal:: revealid1
+    :showtitle: ¿Cuántas veces se ejecuta la instruccion que imprime el valor de j? 
+
+    Se ejecuta 15 veces.
+
+
+Ejercicio 5
+===========
+
+
+Sin quitar ninugno de los loops ``for``, modifica el siguiente programa para que imprima ``10 20 30 40 50`` 10 veces (separadas por ``endl``). Así:
+
+::
+
+    10 20 30 40 50 
+    10 20 30 40 50 
+    10 20 30 40 50 
+    10 20 30 40 50 
+    10 20 30 40 50 
+    10 20 30 40 50 
+    10 20 30 40 50 
+    10 20 30 40 50 
+    10 20 30 40 50 
+    10 20 30 40 50 
+
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+   
+   int main()
+   {
+       for (int i = 0; i < 5; i++) {
+           cout << "i : " << i << endl;        
+           for (int j = 0; j < 3; j++) {
+               cout << "    j : " << j << endl;
+           }    
+       }
+   }
+
+
+Ejercicio 6
+===========
+
+Un patrón comunmente usado en programación es el de buscar el **máximo** en una lista de elementos. Has *hand tracing* del siguiente código para determinar su output.
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <string>
+   using namespace std;
+   
+   int main() {
+       
+       string st = "21987";
+       
+       char maximo = st[0];
+       
+       for (unsigned int i = 1; i < st.length(); i++) {
+           if ( st[i] > maximo) 
+               maximo = st[i];
+           cout << "El maximo hasta ahora es: " << maximo << endl;
+       }
+       
+       cout << "El maximo es: " << maximo << endl;
+   
+       return 0;
+   }
+
+
+**Pregunta 1:** La variable maximo, ¿es un LCV?
+
+**Pregunta 2:** ¿Qué valores asume la variable i a través del programa?
+
+**Pregunta 3:** ¿Qué valores asume la variable maximo a través del programa?
+
+
+Ejercicio 7
+===========
+
+Sin quitar loops, modifique el siguiente programa para que el output sea: ``1.pp 2.pa 3.pz 4.ap 5.aa 6.az 7.zp 8.za 9.zz``
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <string>
+    
+    using namespace std;
+   
+    int main() {
+        string st = "paz";
+
+        for (unsigned int i = 0; i < st.length(); i++) {
+
+            for (unsigned int j = 0; j < st.length(); j++) {
+               cout << st[i] << st[j] << " ";
+            }
+        
+        }
+
+        cout << endl;
+
+        return 0;
+    }
+
+Ejercicio 8
+===========
+
+Sin quitar loops, modifique el siguiente programa para que el output sea: ``pz pa pp az aa ap zz za zp``.
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <string>
+    
+    using namespace std;
+   
+    int main() {
+        string st = "paz";
+
+        for (unsigned int i = 0; i < st.length(); i++) {
+
+            for (unsigned int j = 0; j < st.length(); j++) {
+               cout << st[i] << st[j] << " ";
+            }
+        
+        }
+
+        cout << endl;
+
+        return 0;
+    }
+
+Ejercicio 9
+===========
+
+Haga hand tracing de la función ``ordenAscendente`` primero recibiendo como argumento ``9589`` y luego recibiendo ``2579``.
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <string>
+   using namespace std;
+
+   bool ordenAscendente(const string &st) {
+       
+       for (unsigned int i = 0; i < st.length() - 1; i++ ) {
+           if ( st[i] > st[i+1] ) 
+               return false;
+       }
+       
+       return true;
+   }
+   
+   int main() {
+       
+       if ( ordenAscendente( "9589" ) ) 
+           cout << "Esta ordenado" << endl;
+       else
+           cout << "No esta ordenando" << endl;
+
+       return 0;
+   }
+
+
+
+
+
+Ejercicio 10
+============
+
+Complete la función ``repetido`` para que devuelva true si el string que recibe contiene algún caracter repetido. 
+
+Quizás los siguientes ejemplos te ayuden a pensar en un algoritmo.
+
+
+.. figure:: http://i.imgur.com/qM8tg67.png
+   :align: center
+   :alt: image
+   :width: 50%
+
+
+.. figure:: http://i.imgur.com/KYrcXkD.png
+   :align: center
+   :alt: image
+   :width: 50%
+
+
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <string>
+   #include <cassert>
+    
+   
+   using namespace std;
+   
+   bool repetido(const string &st) {
+       return 0;
+   }
+   
+   void test_repetido() {
+       assert( repetido("amor") == false);
+       assert( repetido("murcielago") == false);
+       assert( repetido("Antilope") == false);
+       assert( repetido("gallina") == true);
+       assert( repetido("gallo") == true);
+       assert( repetido("ornato") == true);
+       assert( repetido("zoo") == true);
+       cout << "Paso todas las pruebas!!!" << endl;
+   }
+   
+   
+   int main() {
+       test_repetido();
+       return 0;
+   }
+
+
+

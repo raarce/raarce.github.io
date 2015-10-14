@@ -1,0 +1,630 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Estructuras de decisión - parte 2 &mdash; Runestone Interactive Overview</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="_static/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/underscore-min.js"></script>
+    <script type="text/javascript" src="_static/lib/lis.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="top" title="Runestone Interactive Overview" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CCOM3033';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="index.html">Runestone Default</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div class="gittip">
+                  <iframe style="border:0;"
+                    src="https://www.gittip.com/bnmnetp/widget.html"
+                    width="48pt" height="22pt" class="gittip-button">
+                  </iframe>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/CCOM3033/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/CCOM3033/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/static/help/bugreports.html'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Estructuras de decisión - parte 2</a><ul>
+<li><a class="reference internal" href="#ejercicio">Ejercicio</a></li>
+<li><a class="reference internal" href="#operadores-booleanos">Operadores booleanos</a></li>
+<li><a class="reference internal" href="#else-if">Else if</a></li>
+<li><a class="reference internal" href="#if-anidados">If anidados</a></li>
+<li><a class="reference internal" href="#validacion-de-input">Validación de input</a></li>
+<li><a class="reference internal" href="#operador-condicional">Operador condicional</a></li>
+<li><a class="reference internal" href="#flags">Flags</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="estructuras-de-decision-parte-2">
+<h1>Estructuras de decisión - parte 2<a class="headerlink" href="#estructuras-de-decision-parte-2" title="Permalink to this headline">¶</a></h1>
+<p>Uno de los usos que se puede dar a los <code class="docutils literal"><span class="pre">if</span></code> es para validar datos entrados por el usuario. El siguiente programa termina si el usuario entra un valor que está fuera del rango de datos aceptados.</p>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='100'  >
+ #include <iostream>
+ using namespace std;
+
+ int main() {
+     int x;
+
+     cout << "Entre un número en el rango [5,15]" << endl;
+     cin >> x;
+
+     if ( x < 5  || x > 15) {
+         cout << "Numero fuera del rango aceptable :-(" << endl;
+         exit(1);
+     }
+
+     cout << "Felicidades, sabes seguir instrucciones" << endl;
+
+     return 0;
+ }
+</textarea>
+<p>Podemos deducir la expresión relacional que pusimos en el if de dos maneras:</p>
+<ol class="arabic">
+<li><p class="first">pensando en una expresión que se hace <em>cierta</em> cuando el número es válido y luego negando la expresion.</p>
+<blockquote>
+<div><p>En el programa pasado, la expresión relacional que es <strong>cierta</strong> cuando el valor es <strong>valido</strong> es: <code class="docutils literal"><span class="pre">x</span> <span class="pre">&gt;=</span> <span class="pre">5</span> <span class="pre">&amp;&amp;</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">15</span></code>. Si negamos esa expresión obtenemos otra expresión que es <strong>cierta</strong> cuando el valor es <strong>invalido</strong>: <code class="docutils literal"><span class="pre">!(x</span> <span class="pre">&gt;=</span> <span class="pre">5</span> <span class="pre">&amp;&amp;</span> <span class="pre">x</span> <span class="pre">&lt;=</span> <span class="pre">15)</span></code>. Usando uno de las leyes de DeMorgan, convertimos esa última expresión en <code class="docutils literal"><span class="pre">x</span> <span class="pre">&lt;</span> <span class="pre">5</span> <span class="pre">||</span> <span class="pre">x</span> <span class="pre">&gt;</span> <span class="pre">15</span></code>.</p>
+</div></blockquote>
+</li>
+<li><p class="first">pensando en una expresión que sea <strong>cierta</strong> solo cuando los valores sean <strong>invalidos</strong>.</p>
+<blockquote>
+<div><p>Las figuras a continuación ilustran los rangos de valores <strong>valido</strong> e <strong>invalido</strong>.</p>
+</div></blockquote>
+</li>
+</ol>
+<div class="section" id="ejercicio">
+<h2>Ejercicio<a class="headerlink" href="#ejercicio" title="Permalink to this headline">¶</a></h2>
+<p>El gobierno de PR hara disponible una tarjeta de descuentos que aplica a solo a teenagers (edades [13,18]) y a viejeyers (edades [70,130]). Complete el siguiente programa para que realice input validation.</p>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='100'  >
+ #include <iostream>
+ using namespace std;
+
+ int main() {
+     int x;
+
+     cout << "Programa de tarjeta de descuentos." << endl;
+     cout << "Entre su edad" << endl;
+     cin >> x;
+
+     if ( ????? ) {
+         cout << "Usted no es elegible, no desperdicie "
+              << "el tiempo de este sistema. " << endl;
+         exit(1);
+     }
+
+     cout << "Felicidades, recibirá la tarjeta" << endl;
+
+     return 0;
+ }
+</textarea>
+<p>Las estructuras de decisión deciden si ejecutar un bloque del programa u otro dependiendo del resultado de una <strong>expresión relacional</strong></p>
+<div class="highlight-python"><div class="highlight"><pre>int edad;
+cin &gt;&gt; edad;
+if ( edad &gt;= 18 ) {
+        cout &lt;&lt; &quot;Mayor de edad &quot; &lt;&lt; endl;
+}
+</pre></div>
+</div>
+<p>Los operadores de comparación en C++</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="22%" />
+<col width="59%" />
+<col width="20%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Operación</th>
+<th class="head">Significa</th>
+<th class="head">Negado</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>x &gt; y</td>
+<td>x es mayor que y</td>
+<td>x &lt;= y</td>
+</tr>
+<tr class="row-odd"><td>x &gt;= y</td>
+<td>x es mayor o igual a y</td>
+<td>x &lt; y</td>
+</tr>
+<tr class="row-even"><td>x &lt; y</td>
+<td>x es menor que y</td>
+<td>x &gt;= y</td>
+</tr>
+<tr class="row-odd"><td>x &lt;= y</td>
+<td>x es menor o igual a y</td>
+<td>x &gt; y</td>
+</tr>
+<tr class="row-even"><td>x == y</td>
+<td>x es igual a y</td>
+<td>x != y</td>
+</tr>
+<tr class="row-odd"><td>x != y</td>
+<td>x no es igual a y</td>
+<td>x == y</td>
+</tr>
+</tbody>
+</table>
+<p>Es importante saber el negado de las comparaciones para entender en que casos se ejecutan el <strong>if</strong> y el <strong>else</strong>. Por ejemplo,</p>
+<div class="highlight-python"><div class="highlight"><pre>int x;
+
+cin &gt;&gt; x;
+
+if (x &gt; 25) {
+    // BLOQUE A
+    cout &lt;&lt; &quot;Cucara&quot; &lt;&lt; endl;
+}
+else {
+    // BLOQUE B
+    cout &lt;&lt; &quot;Macara&quot; &lt;&lt; endl;
+}
+
+// BLOQUE C
+cout &lt;&lt; &quot;Titere&quot; &lt;&lt; endl;
+</pre></div>
+</div>
+
+    <div data-component="reveal" id="revealid1"   data-showtitle="¿Qué valores de x hacen que se ejecute bloque A?" data-hidetitle="Hide">
+    El bloque A se ejecuta cuando <strong>x es mayor que 25</strong>.
+    </div>
+    
+    <div data-component="reveal" id="revealid2"   data-showtitle="¿Qué valores de x hacen que se ejecute bloque B?" data-hidetitle="Hide">
+    El bloque B se ejecuta cuando <strong>x es menor o igual que 25</strong>.
+    </div>
+    
+    <div data-component="reveal" id="revealid3"   data-showtitle="¿Qué valores de x hacen que se ejecute bloque C?" data-hidetitle="Hide">
+    El bloque C se ejecuta <strong>independiente del valor de x</strong>.
+    </div>
+    <p>El siguiente código es equivalente al anterior.</p>
+<div class="highlight-python"><div class="highlight"><pre>if (x &lt;= 25) {
+    // BLOQUE B
+    cout &lt;&lt; &quot;Macara&quot; &lt;&lt; endl;
+}
+else {
+    // BLOQUE A
+    cout &lt;&lt; &quot;Cucara&quot; &lt;&lt; endl;
+}
+
+// BLOQUE C
+cout &lt;&lt; &quot;Titere&quot; &lt;&lt; endl;
+</pre></div>
+</div>
+</div>
+<div class="section" id="operadores-booleanos">
+<h2>Operadores booleanos<a class="headerlink" href="#operadores-booleanos" title="Permalink to this headline">¶</a></h2>
+<p>Cuando una expresión relacional depende de más de una comparación o valor booleano debemos usar operadores booleanos entre ellas.</p>
+<p><code class="docutils literal"><span class="pre">x</span> <span class="pre">&gt;=</span> <span class="pre">25</span> <span class="pre">&amp;&amp;</span> <span class="pre">x</span> <span class="pre">=&lt;</span> <span class="pre">67</span></code>: x está entre 25 (inclusive) y 67 (inclusive)</p>
+<p><code class="docutils literal"><span class="pre">25</span> <span class="pre">=&lt;</span> <span class="pre">x</span> <span class="pre">=&lt;</span> <span class="pre">67</span></code>: syntax error!!</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="13%" />
+<col width="59%" />
+<col width="28%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Operación</th>
+<th class="head">Significa</th>
+<th class="head">Negado</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">x</span> <span class="pre">&amp;&amp;</span> <span class="pre">y</span></code></td>
+<td><code class="docutils literal"><span class="pre">true</span></code> solo cuando x y y son <cite>true</cite></td>
+<td><code class="docutils literal"><span class="pre">!x</span> <span class="pre">||</span> <span class="pre">!y</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">x</span> <span class="pre">||</span> <span class="pre">y</span></code></td>
+<td><code class="docutils literal"><span class="pre">true</span></code> cuando x o y son <cite>true</cite> x &lt; y</td>
+<td><code class="docutils literal"><span class="pre">!x</span> <span class="pre">&amp;&amp;</span> <span class="pre">!y</span></code></td>
+</tr>
+<tr class="row-even"><td><code class="docutils literal"><span class="pre">x</span> <span class="pre">^</span> <span class="pre">y</span></code></td>
+<td><code class="docutils literal"><span class="pre">true</span></code> cuando x o y son <cite>true</cite> pero no ambas</td>
+<td><code class="docutils literal"><span class="pre">x</span> <span class="pre">&amp;&amp;</span> <span class="pre">y</span> <span class="pre">||</span> <span class="pre">!x</span> <span class="pre">&amp;&amp;</span> <span class="pre">!y</span></code></td>
+</tr>
+<tr class="row-odd"><td><code class="docutils literal"><span class="pre">!x</span></code></td>
+<td><code class="docutils literal"><span class="pre">true</span></code> cuando x es <cite>false</cite></td>
+<td><code class="docutils literal"><span class="pre">x</span></code></td>
+</tr>
+</tbody>
+</table>
+<div class="highlight-python"><div class="highlight"><pre>if (x &lt; 0 &amp;&amp; x &gt; 25) {
+    // BLOQUE A
+    cout &lt;&lt; &quot;Cucara&quot; &lt;&lt; endl;
+}
+else {
+    // BLOQUE B
+    cout &lt;&lt; &quot;Macara&quot; &lt;&lt; endl;
+}
+</pre></div>
+</div>
+
+    <div data-component="reveal" id="revealid2"   data-showtitle="¿Qué valores de x hacen que se ejecute bloque B?" data-hidetitle="Hide">
+    El bloque B se ejecuta cuando x es <strong>mayor o igual a 0 Y menor igual a 25</strong>.
+    </div>
+    </div>
+<div class="section" id="else-if">
+<h2>Else if<a class="headerlink" href="#else-if" title="Permalink to this headline">¶</a></h2>
+<p>Para situaciones donde necesitamos que escoger entre más de un bloque basado en comparaciones sobre la(s) misma(s) variables. Por ejemplo, dado la edad imprimir <code class="docutils literal"><span class="pre">&quot;menor</span> <span class="pre">de</span> <span class="pre">edad</span></code>, <code class="docutils literal"><span class="pre">&quot;mayor</span> <span class="pre">de</span> <span class="pre">edad&quot;</span></code> o <code class="docutils literal"><span class="pre">&quot;senior</span> <span class="pre">citizen&quot;</span></code> si tiene entre [0,17], [18,65], [65,130].</p>
+<p>Cuidado con código muerto. Codigo que nunca se ejecutará pues su condición nunca se va a cumplir (por su posición en el if-elseif):</p>
+<div class="highlight-python"><div class="highlight"><pre>if (nota &gt;= 90) cout &lt;&lt; &quot;A&quot; &lt;&lt; endl;
+else if (nota &gt;= 70) cout &lt;&lt; &quot;C&quot; &lt;&lt; endl;
+else if (nota &gt;= 80) cout &lt;&lt; &quot;B&quot; &lt;&lt; endl;
+else if (nota &gt;= 60) cout &lt;&lt; &quot;D&quot; &lt;&lt; endl;
+else cout &lt;&lt; &quot;F&quot; &lt;&lt; endl;
+</pre></div>
+</div>
+<div class="highlight-python"><div class="highlight"><pre>if (x &gt; 10 &amp;&amp; x &lt; 4 ) cout &lt;&lt; &quot;Rumba&quot; &lt;&lt; endl;
+else                  cout &lt;&lt; &quot;Candombe&quot; &lt;&lt; endl;
+</pre></div>
+</div>
+</div>
+<div class="section" id="if-anidados">
+<h2>If anidados<a class="headerlink" href="#if-anidados" title="Permalink to this headline">¶</a></h2>
+<p>Una estructura de decisión dentro de otra.</p>
+<div class="highlight-python"><div class="highlight"><pre>if (state == &quot;PR&quot;) {
+    if (edad &gt;= 18)
+      cout &lt;&lt; &quot;Puede comprar alcohol&quot; &lt;&lt; endl;
+    else
+      cout &lt;&lt; &quot;No puede comprar alcohol&quot; &lt;&lt; endl;
+}
+else {
+    if (edad &gt;= 21)
+      cout &lt;&lt; &quot;Puede comprar alcohol&quot; &lt;&lt; endl;
+    else
+      cout &lt;&lt; &quot;No puede comprar alcohol&quot; &lt;&lt; endl;
+}
+</pre></div>
+</div>
+</div>
+<div class="section" id="validacion-de-input">
+<h2>Validación de input<a class="headerlink" href="#validacion-de-input" title="Permalink to this headline">¶</a></h2>
+<p>Determinar si el(los) valor(es) entrados por el usuario son válidos para la aplicación.</p>
+<p>¿Qué rangos de valores serían válidos para las siguientes variables?
+* edad (en años, para una aplicación en un hospital)
+* estatura (en pulgadas, para una aplicación en escuelas)
+* temperatura (para una aplicación de bosques)</p>
+</div>
+<div class="section" id="operador-condicional">
+<h2>Operador condicional<a class="headerlink" href="#operador-condicional" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-python"><div class="highlight"><pre>if (expresion relacional)
+    x = un valor o expresión;
+else
+    x = otro valor o expresión
+</pre></div>
+</div>
+<p>El operador condicional es una manera resumida de expresar ese tipo de estructuras de decisión.</p>
+<div class="highlight-python"><div class="highlight"><pre>x = expresion relacional ? valor : otro valor
+</pre></div>
+</div>
+</div>
+<div class="section" id="flags">
+<h2>Flags<a class="headerlink" href="#flags" title="Permalink to this headline">¶</a></h2>
+<p>Un flag es una variable Booleana o entera que avisa cuando existe cierta condición.</p>
+<div class="highlight-python"><div class="highlight"><pre>if (sales &gt;= QUOTA_AMOUNT)
+       salesQuotaMet = 1;
+    else
+       salesQuotaMet = 0;
+
+if (salesQuotaMet)
+    cout &lt;&lt; &quot;You get your commission&quot;;
+</pre></div>
+</div>
+<p>Es util cuando las condiciones para determinar <cite>true</cite> son múltiples.
+Piensa en ejemplo....</p>
+</div>
+</div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015 director.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

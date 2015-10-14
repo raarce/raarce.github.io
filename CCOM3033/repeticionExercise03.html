@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Ejercicio en clase : &mdash; Runestone Interactive Overview</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="_static/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/underscore-min.js"></script>
+    <script type="text/javascript" src="_static/lib/lis.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="top" title="Runestone Interactive Overview" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CCOM3033';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="index.html">Runestone Default</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div class="gittip">
+                  <iframe style="border:0;"
+                    src="https://www.gittip.com/bnmnetp/widget.html"
+                    width="48pt" height="22pt" class="gittip-button">
+                  </iframe>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/CCOM3033/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/CCOM3033/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/static/help/bugreports.html'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Ejercicio en clase :</a><ul>
+<li><a class="reference internal" href="#demostracion-1-las-instrucciones-break-y-continue">Demostración 1: las instrucciones <code class="docutils literal"><span class="pre">break</span></code> y <code class="docutils literal"><span class="pre">continue</span></code></a></li>
+<li><a class="reference internal" href="#estructuras-de-decision">Estructuras de decisión</a></li>
+<li><a class="reference internal" href="#ejercicio-1">Ejercicio 1</a></li>
+<li><a class="reference internal" href="#operador-condicional">Operador condicional</a></li>
+<li><a class="reference internal" href="#switch-case">Switch-Case</a></li>
+<li><a class="reference internal" href="#leyendo-datos-de-un-archivo">Leyendo datos de un archivo</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="ejercicio-en-clase">
+<h1>Ejercicio en clase :<a class="headerlink" href="#ejercicio-en-clase" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="demostracion-1-las-instrucciones-break-y-continue">
+<h2>Demostración 1: las instrucciones <code class="docutils literal"><span class="pre">break</span></code> y <code class="docutils literal"><span class="pre">continue</span></code><a class="headerlink" href="#demostracion-1-las-instrucciones-break-y-continue" title="Permalink to this headline">¶</a></h2>
+<p>¿Qué números imprime el siguiente programa?</p>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''     >
+#include <iostream>
+
+using namespace std;
+int main() {
+
+    for (int i = 0; i < 10; i++) {
+        cout << i << " ";
+    }
+    cout << endl << "done" << endl;
+    return 0;
+}
+</textarea>
+<p>Ahora le añadimos un <code class="docutils literal"><span class="pre">break</span></code> dentro del loop. ¿Qué números imprime?</p>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''     >
+#include <iostream>
+#include <string>
+#include <cassert>
+
+using namespace std;
+int main() {
+
+    for (int i = 0; i < 10; i++) {
+        cout << i << " ";
+        if (i == 6) break;
+    }
+    cout << endl << "done" << endl;
+    return 0;
+}
+</textarea>
+<p>En el siguiente le añadimos un <code class="docutils literal"><span class="pre">continue</span></code> cuando la variable <code class="docutils literal"><span class="pre">i</span></code> sea igual  3 o 6. ¿Qué números imprime?</p>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''     >
+#include <iostream>
+#include <string>
+#include <cassert>
+
+using namespace std;
+int main() {
+
+    for (int i = 0; i < 10; i++) {
+        if (i == 3 || i == 6) continue;
+        cout << i << " ";
+
+    }
+    cout << endl << "done" << endl;
+    return 0;
+}
+</textarea>
+<p>A continuación algunas ilustraciones de cómo el break afecta el flujo de las estructuras de repetición.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="http://www.programiz.com/sites/tutorial2program/files/working-break.jpg"><img alt="image" src="http://www.programiz.com/sites/tutorial2program/files/working-break.jpg" style="width: 50%;" /></a>
+</div>
+<p>A continuación algunas ilustraciones de cómo el break afecta el flujo de las estructuras de repetición. En la figura del <code class="docutils literal"><span class="pre">for</span></code>, la figura sería más ilustrativa si la flecha que sale del continue apuntara al <strong>update expression</strong>. Ahora mismo da la impresión erronea de que el continue regresa a la inicialización del LCV.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="http://www.programiz.com/sites/tutorial2program/files/working-continue.jpg"><img alt="image" src="http://www.programiz.com/sites/tutorial2program/files/working-continue.jpg" style="width: 50%;" /></a>
+</div>
+</div>
+<div class="section" id="estructuras-de-decision">
+<h2>Estructuras de decisión<a class="headerlink" href="#estructuras-de-decision" title="Permalink to this headline">¶</a></h2>
+<p>Completemos nuestro estudio de las estructuras de decisión...</p>
+</div>
+<div class="section" id="ejercicio-1">
+<h2>Ejercicio 1<a class="headerlink" href="#ejercicio-1" title="Permalink to this headline">¶</a></h2>
+<p>Modifique el siguiente código para que no incurra en tanta duplicación de instrucciones (y que realice la misma funcionalidad)</p>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='100'  >
+ #include <iostream>
+
+ using namespace std;
+ int main() {
+
+     int n = 0;
+
+     cout << "Entre un numero entre [0,3]: ";
+     cin >> n;
+     cout << "Usted entro: " << n << endl;
+
+
+     if (n == 0) {
+         cout << "Hago esto..." << endl;
+         cout << "Habia una vez" << endl;
+         cout << "Hago lo otro...." << endl;
+     }
+     else if (n <= 2) {
+         cout << "Hago esto..." << endl;
+         cout << "Un barco chiquitito" << endl;
+         cout << "Hago lo otro...." << endl;
+     }
+     else if (n == 3) {
+         cout << "Hago esto..." << endl;
+         cout << "Que no podia navegar" << endl;
+         cout << "Hago lo otro...." << endl;
+     }
+     else {
+         cout << "Hago esto..." << endl;
+         cout << "Pasaron 1,2,3,4,5,6,7 semanas" << endl;
+         cout << "Hago lo otro...." << endl;
+     }
+ }
+</textarea>
+</div>
+<div class="section" id="operador-condicional">
+<h2>Operador condicional<a class="headerlink" href="#operador-condicional" title="Permalink to this headline">¶</a></h2>
+<p>Hay muchas ocasiones en que el único efecto de los if-else es asignar uno u otro valor a una variable. Por ejemplo,</p>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='100'  >
+ #include <iostream>
+
+ using namespace std;
+ int main() {
+
+     int n;
+
+     cin >> n;
+
+     if (n < 0)
+         n = -n;
+     else
+         n = 42;
+
+     cout << n << endl;
+
+     return 0;
+ }
+</textarea>
+
+    <div data-component="reveal" id="revealid1"   data-showtitle="¿Qué valor se le asigna a la n si es negativa?" data-hidetitle="Hide">
+    Se le asigna su negativo, i.e. el valor positivo.
+    </div>
+    
+    <div data-component="reveal" id="revealid1"   data-showtitle="¿Qué valor se le asigna a la n no es negativa?" data-hidetitle="Hide">
+    Se le asigna el número 42.
+    </div>
+    <p>Observe que hemos sustituido las lineas 10-13 por una sola línea.</p>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='100'  >
+#include <iostream>
+
+using namespace std;
+int main() {
+
+    int n;
+
+    cin >> n;
+
+    n = n < 0 ? -n : 42;
+
+    cout << n << endl;
+
+    return 0;
+}
+</textarea>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/opCondicional.png"><img alt="image" src="_images/opCondicional.png" style="width: 80%;" /></a>
+</div>
+<p>Complete la función <code class="docutils literal"><span class="pre">valorAbsoluto</span></code>  utilizando un operador condicional para que devuelva lo correcto.</p>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''     >
+#include <iostream>
+#include <cassert>
+using namespace std;
+
+int valorAbsoluto(int n) {
+    return 0;
+}
+
+void test_valorAbsoluto() {
+    assert( valorAbsoluto(0) == 0);
+    assert( valorAbsoluto(9) == 9);
+    assert( valorAbsoluto(-8) == 8);
+}
+
+int main() {
+    test_valorAbsoluto();
+    return 0;
+}
+</textarea>
+<p>Las expresiones usando el operador condicional se pueden anidar. Por ejemplo la siguiente expresíon asigna 100, 200 o 300 dependiendo de si n es 1, 2 u otra cosa.</p>
+<div class="highlight-python"><div class="highlight"><pre>x = (n == 1) ? 100 : (n == 2) ? 200 : 300;
+</pre></div>
+</div>
+<p>Complete la función <code class="docutils literal"><span class="pre">foo</span></code> utilizando un operador condicional para que la función devuelva 0 si <em>n</em> es negativa, 100 si <em>n</em> es mayor de 100, o <em>n</em> si esta en el rango [0,100].</p>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''     >
+#include <iostream>
+#include <cassert>
+using namespace std;
+
+int foo(int n) {
+    return 0;
+}
+
+void test_foo() {
+    assert( foo(0) == 0);
+    assert( foo(100) == 100);
+    assert( foo(-8) == 0);
+    assert( foo(101) == 100);
+}
+
+int main() {
+    test_foo();
+    return 0;
+}
+</textarea>
+</div>
+<div class="section" id="switch-case">
+<h2>Switch-Case<a class="headerlink" href="#switch-case" title="Permalink to this headline">¶</a></h2>
+<p>C++ tiene una estructura de decisión adicional que es particularmente adecuada para situaciones donde queremos basar el flujo de nuestro programa en el valor de una variable entera o de tipo int.</p>
+<p>El siguiente programa muestra esa estructura en acción.  El propósito del programa es imprimir el nombre del número.</p>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='100'  >
+#include <iostream>
+#include <string>
+#include <cassert>
+
+using namespace std;
+int main() {
+
+    int n;
+
+    cin >> n;
+
+    switch(n) {
+        case 0:
+            cout << "Cero" << endl;
+            break;
+        case 1:
+            cout << "Uno" << endl;
+            break;
+        case 2:
+            cout << "Dos" << endl;
+            break;
+        default:
+            cout << "Fuera de rango" << endl;
+            break;
+    }
+
+    return 0;
+}
+</textarea>
+
+    <div data-component="reveal" id="revealid1"   data-showtitle="¿Por qué usamos un break luego del bloque de código en cada uno de los casos?" data-hidetitle="Hide">
+    <blockquote>
+<div>Porque los break son la forma de terminar cada caso. Si no lo ponemos, se continuan ejecutando las instrucciones del próximo caso. Por ejemplo, si quitas  el break que aparece en el caso 1 (en la línea) y el usuario entra <code class="docutils literal"><span class="pre">1</span></code>, entonces saldra impreso <code class="docutils literal"><span class="pre">Uno</span> <span class="pre">Dos</span></code>.</div></blockquote>
+
+    </div>
+    
+    <div data-component="reveal" id="revealid1"   data-showtitle="¿Qué pasa si ``n`` asume un valor que no esta contemplado en ninguno de los ``case``?" data-hidetitle="Hide">
+    <blockquote>
+<div>Se ejecuta el bloque de instrucciones bajo el caso <code class="docutils literal"><span class="pre">default</span></code>.</div></blockquote>
+
+    </div>
+    
+    <div data-component="reveal" id="revealid1"   data-showtitle="¿Qué pasa si no incluimos una caso ``default``?" data-hidetitle="Hide">
+    <blockquote>
+<div>Si no incluyes caso default, si la variable asume un valor no contemplado en ninguno de los casos, entonces no se ejecuta <strong>ninguno de los casos</strong> del switch-case.</div></blockquote>
+
+    </div>
+    </div>
+<div class="section" id="leyendo-datos-de-un-archivo">
+<h2>Leyendo datos de un archivo<a class="headerlink" href="#leyendo-datos-de-un-archivo" title="Permalink to this headline">¶</a></h2>
+<ul class="simple">
+<li><code class="docutils literal"><span class="pre">#include&lt;fstream&gt;</span></code>: es el header file donde están definidas las clases <code class="docutils literal"><span class="pre">ifstream</span></code> y <code class="docutils literal"><span class="pre">ofstream</span></code>.</li>
+<li><code class="docutils literal"><span class="pre">ifstream</span></code> : clase para archivos de entrada</li>
+<li><code class="docutils literal"><span class="pre">ofstream</span></code> : clase para archivos de salida</li>
+<li><code class="docutils literal"><span class="pre">inputFile.open(&quot;thefilename&quot;)</span></code>: para abrir el file</li>
+<li><code class="docutils literal"><span class="pre">inputFile.fail()</span></code>: para determinar si hubo problemas al abrirlo</li>
+<li><code class="docutils literal"><span class="pre">&gt;&gt;</span></code> : operador que se usa en conjunto al objeto de clase <code class="docutils literal"><span class="pre">ifstream</span></code> para leer datos del file.</li>
+<li><code class="docutils literal"><span class="pre">&lt;&lt;</span></code> : operadore que se usar en conjunto al objeto de clase <code class="docutils literal"><span class="pre">ofstream</span></code> para escribir datos al file.</li>
+<li><code class="docutils literal"><span class="pre">inputFile.close()</span></code>: cierra el file debidamente.</li>
+<li>Fortunately, the <code class="docutils literal"><span class="pre">&gt;&gt;</span></code> operator not only reads data from a <code class="docutils literal"><span class="pre">file</span></code>, but also returns a <code class="docutils literal"><span class="pre">true</span></code> or <code class="docutils literal"><span class="pre">false</span></code> value indicating whether the data was successfully read or not.</li>
+<li>If the operator returns <code class="docutils literal"><span class="pre">true</span></code>, then a value was successfully read. If the operator returns <code class="docutils literal"><span class="pre">false</span></code>, it means that no value was read from the file.</li>
+</ul>
+</div>
+</div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015 director.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,532 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Asignación &mdash; Runestone Interactive Overview</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="_static/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/underscore-min.js"></script>
+    <script type="text/javascript" src="_static/lib/lis.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="top" title="Runestone Interactive Overview" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CCOM3033';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="index.html">Runestone Default</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div class="gittip">
+                  <iframe style="border:0;"
+                    src="https://www.gittip.com/bnmnetp/widget.html"
+                    width="48pt" height="22pt" class="gittip-button">
+                  </iframe>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/CCOM3033/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/CCOM3033/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/static/help/bugreports.html'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Asignación</a><ul>
+<li><a class="reference internal" href="#ejercicio-01-oruga-en-un-pozo">Ejercicio 01: Oruga en un pozo</a></li>
+<li><a class="reference internal" href="#ejercicio-02-raices-enteras">Ejercicio 02: Raices enteras</a></li>
+<li><a class="reference internal" href="#ejercicio-03-generadores">Ejercicio 03: Generadores</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="asignacion">
+<h1>Asignación<a class="headerlink" href="#asignacion" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="ejercicio-01-oruga-en-un-pozo">
+<h2>Ejercicio 01: Oruga en un pozo<a class="headerlink" href="#ejercicio-01-oruga-en-un-pozo" title="Permalink to this headline">¶</a></h2>
+<p>Una oruga ha caido en un pozo de 6 pies de profundo y quiere subir a la superficie. La oruga puede subir 3 pies cuando hay sol, pero se desliza 1 pie hacia abajo cuando está durmiendo de noche. La oruga tiene un factor de fatiga de 10%, lo que significa que cada día puede 10% x 3 = 0.3 pies menos que el día anterior (la distancia perdida por fatiga es siempre 10% de la distancia que podía subir el primer día). ¿En qué día la oruga sale del pozo, i.e. cuál es el primer día en que la altura de la oruga excede 6 pies (un día consisite de un periodo de sol seguido de un periodo de noche). Como puedes ver en la siguiente table la oruga sale del poso durante el dia 3.</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="3%" />
+<col width="16%" />
+<col width="17%" />
+<col width="29%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Dia</th>
+<th class="head">Altura inicial</th>
+<th class="head">Distancia subió</th>
+<th class="head">Distancia despues de subir</th>
+<th class="head">Distancia después de deslizarse</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>0&#8217;</td>
+<td>3&#8217;</td>
+<td>3&#8217;</td>
+<td>2&#8217;</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>2&#8217;</td>
+<td>2.7&#8217;</td>
+<td>4.7&#8217;</td>
+<td>3.7&#8217;</td>
+</tr>
+<tr class="row-even"><td>3</td>
+<td>3.7&#8217;</td>
+<td>2.4&#8217;</td>
+<td>6.1&#8217;</td>
+<td><ul class="first last simple">
+<li>: salió del poso</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p>Si el factor fatiga hace que la distancia a subir sea menor que cero, la oruga no sube ese día.  Sin importar cuanto sube la oruga, siempre se desliza hacia abajo por la misma cantidad cada noche.</p>
+<p>Esta ejercicio consiste de resolver el problema de la oruga en el pozo de forma general.  Es decir, dado la altura del pozo, la cantidad que sube, la cantidad que desliza y el factor de fatiga, nuestro programa determinará en que día la oruga alcanza salir del pozo. Puede que dados los parámetros la oruga nunca salga del pozo. En tal caso el programa debe indicar en que día la oruga &#8220;pasa del fondo&#8221; del pozo.</p>
+<p>Ejemplo:</p>
+<table border="1" class="docutils">
+<colgroup>
+<col width="3%" />
+<col width="16%" />
+<col width="17%" />
+<col width="29%" />
+<col width="35%" />
+</colgroup>
+<thead valign="bottom">
+<tr class="row-odd"><th class="head">Dia</th>
+<th class="head">Altura inicial</th>
+<th class="head">Distancia subió</th>
+<th class="head">Distancia despues de subir</th>
+<th class="head">Distancia después de deslizarse</th>
+</tr>
+</thead>
+<tbody valign="top">
+<tr class="row-even"><td>1</td>
+<td>0&#8217;</td>
+<td>1&#8217;</td>
+<td>1&#8217;</td>
+<td>0&#8217;</td>
+</tr>
+<tr class="row-odd"><td>2</td>
+<td>0&#8217;</td>
+<td>0.90&#8217;</td>
+<td>0.90&#8217;</td>
+<td>-0.10&#8217;   : paso del fondo</td>
+</tr>
+</tbody>
+</table>
+<p>A continuación proveemos un esqueleto del programa con un unit test que hace varias pruebas para determinar la validez de la función <code class="docutils literal"><span class="pre">diasSalir</span></code>. Solo tienes que implementar la función <code class="docutils literal"><span class="pre">diasSalir</span></code>.  Lee bien la documentación de la función para que entiendas lo que debe devolver.</p>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''     >
+#include <iostream>
+#include <cassert>
+using namespace std;
+
+// Dado la altura del pozo, cantidad que sube, cantidad que  baja,
+// y factor fatiga, computara el numero de dias que tardara
+// en salir del pozo. Si es imposible salir, devolvera el negativo
+// del número de dias en bajo más allá del fondo.
+
+int diasEnSalir(float alturaPozo, float sube,
+   float baja, float factorFatiga) {
+
+   return 0;
+
+}
+
+void test_diasEnSalir() {
+    assert(diasEnSalir(6,3,1,0.10) == 3);
+    assert(diasEnSalir(10,2,1,0.50) == -4);
+    assert(diasEnSalir(50,5,3,0.14) == -7);
+    assert(diasEnSalir(50,6,4,0.01) == -68);
+    assert(diasEnSalir(50,6,3,0.01) == 20);
+    assert(diasEnSalir(1,1,1,0.01) == -2);
+
+    cout << "Paso todas la pruebas!!!" << endl;
+}
+
+
+int main() {
+    test_diasEnSalir();
+    return 0;
+}
+</textarea>
+</div>
+<div class="section" id="ejercicio-02-raices-enteras">
+<h2>Ejercicio 02: Raices enteras<a class="headerlink" href="#ejercicio-02-raices-enteras" title="Permalink to this headline">¶</a></h2>
+<p>Una de las operaciones utilizadas en criptografía es encontrar las raices enteras de números enteros usando operadores modulares. Por ejemplo, dado m = 15, n = 5, p = 17  ¿cuál es el número que elevado a la 5 es igual a 15 (usando operaciones modulo 17)?. En otras palabras, dado m, n y p, determinar k tal que <span class="math">\((k^n)\,mod\, p = m\)</span> .  Complete la función <code class="docutils literal"><span class="pre">raizEntera</span></code> para que implemente dicha funcionalidad. Vea la documentación de la función para que entienda sus parámetros y valores de retorno.</p>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''     >
+#include <iostream>
+#include <cassert>
+using namespace std;
+
+// Dado dos enteros positivos m y n y p tal que
+// existe una k  para que (k^n)%p = m.
+// Determina y devuelve el valor de k.
+
+unsigned int raizEntera( unsigned int m, unsigned int n,
+                         unsigned int p) {
+    return 0;
+}
+
+void test_raizEntera() {
+    assert(raizEntera(4, 5, 7) == 2);    // (2^5)%7 = 4
+    assert(raizEntera(45, 7, 47) == 10); // (10^7)%47 = 45
+    assert(raizEntera(2, 9, 83) == 6);   // (6^9)%83 = 2
+    assert(raizEntera(30, 5, 89) == 19); // (19^5)%89 = 30
+    assert(raizEntera(1, 7, 89) == 1);   // (1^7)%89 = 1
+    cout << "Paso todas la pruebas!!!" << endl;
+}
+
+int main() {
+    test_raizEntera();
+    return 0;
+}
+</textarea>
+</div>
+<div class="section" id="ejercicio-03-generadores">
+<h2>Ejercicio 03: Generadores<a class="headerlink" href="#ejercicio-03-generadores" title="Permalink to this headline">¶</a></h2>
+<p>La suma de digitos de un entero positivo n se define como la suma del n y sus dígitos. Por ejemplo, la suma de dígitos del 216 es:
+<span class="math">\(198 + 1 + 9 + 8= 216\)</span></p>
+<p>Cuando <em>m</em> es la suma de dígitos de <em>n</em>, decimos que <em>n</em> es un generador de <em>m</em>. Por ejemplo, 198 es un generador de 216. Otro ejemplo, 245 es un generador de 256 (pues <span class="math">\(245 + 2 + 4 +  5 = 256\)</span>).</p>
+<p>Algunos números <strong>no</strong> tienen generador. Algunos números tienen más de un generador. Por ejemplo, los generadores de 216 son 198 y 207.</p>
+<p>Complete la función minGenerador para que dado un numero <em>m</em> devuelva su minimo generador. Si no tiene generador devolverá 0.</p>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''     >
+#include <iostream>
+#include <cassert>
+using namespace std;
+
+unsigned int minGenerador(unsigned int m) {
+    return 0;
+}
+
+void test_minGenerador() {
+    assert( minGenerador(216)  == 198);
+    assert( minGenerador(121)  == 0);
+    assert( minGenerador(2005) == 1979);
+    assert( minGenerador(99)   == 90);
+    assert( minGenerador(1987)   == 1970);
+    assert( minGenerador(42)   == 0);
+
+    cout << "Paso las pruebas!!!!" << endl;
+}
+
+int main() {
+    test_minGenerador();
+    return 0;
+}
+</textarea>
+</div>
+</div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015 director.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

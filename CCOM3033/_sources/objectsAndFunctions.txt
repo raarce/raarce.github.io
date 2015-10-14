@@ -1,0 +1,104 @@
+=====================
+CCOM3033 - B51
+=====================
+
+
+
+Objetos y funciones
+-------------------
+
+En C++ los objetos se pasan a funciones externas como argumentos por referencia. En el siguiente ejemplo mostramos como implementar el programa de la distancia de puntos (que hicimos en clase) usando una función externa llamada ``distancia`` .
+
+
+::
+
+    #include <QPointF>
+    #include <iostream>
+    #include <cmath>
+
+    using namespace std;
+
+    double distancia(const QPointF &a, const QPointF &b) {
+      return sqrt( pow(a.x() - b.x(), 2.0) + 
+                 pow(a.y() - b.y(), 2.0) );
+    }
+
+    int main() {
+      double x, y;
+
+      cin >> x >> y;
+      QPointF p1(x,y);
+
+      cin >> x >> y;
+      QPointF p2(x,y);
+
+      cout << "La distancia es: " << distancia(p1, p2) << endl;
+
+      return 0;
+    }
+
+
+Observe lo siguiente:
+
+#. La función ``distancia`` recibe dos objetos **por referencia**. Se podrían recibir por valor, pero esto requeriría crear una copia de cada argumento y sería ineficiente, especialmente para objetos que guarden mucha información dentro de si.
+
+#. En el encabezado de la función ``distancia`` los parámetros fueron declarados ``const``. Esto evita que la función ``distancia`` pueda invocar métodos que modifiquen los objetos.
+
+#. La función ``distancia`` es una función *externa* a la clase ``QPointF`` por lo que tiene que usar los *getters* para acceder las propiedades de los argumentos. (La función ``distancia`` **no** puede meter la mano dentro de los objetos).
+
+
+Ejercicio 1
+===========
+
+Implemente un programa que pida las coordenadas de tres puntos (en el plano XY) y reporte si estos quedan en la misma línea.  Tres puntos quedan en la misma línea si las líneas que se forman entre ellos tienen la misma pendiente e intercepto en y.
+
+Dado las coordenadas de dos puntos :math:`(x_0,y_0)` y :math:`(x_1,y_1)`. Su pendiente *m* se puede calcular así:
+
+:math:`m = \frac{(y_1 - y_0)}{(x_1 - x_0)}` 
+
+y su intercepto en y, *b* así:
+
+:math:`b = y_0 - m \cdot x_0` 
+
+La función ``main`` debe pedir las coordenadas y crear los tres objetos de tipo ``QPointF``. Luego debe invocar a otra función ``tresEnLinea`` que dado los tres puntos devuelva ``true`` si están en la misma línea.
+
+Debe crear una función *unit test* que valide a la función ``tresEnLínea``.
+
+**OJO** Cuidado con los puntos que forman líneas verticales. Estos deben ser tratados de forma especial (pues si usas la ecuación de pendiente, estarías dividiendo entre 0).
+
+
+Ejemplos de ejecuciones del programa
+
+::
+
+    Entre las coordenadas del punto 1: 1 1
+    Entre las coordenadas del punto 2: 2 2
+    Entre las coordenadas del punto 3: 0 0
+
+    Esos tres puntos estan en la misma linea.
+
+
+::
+
+    Entre las coordenadas del punto 1: 2 1
+    Entre las coordenadas del punto 2: 2 3
+    Entre las coordenadas del punto 3: 2 4
+
+    Esos tres puntos estan en la misma linea.
+
+
+::
+
+    Entre las coordenadas del punto 1: 1 2
+    Entre las coordenadas del punto 2: 2 2
+    Entre las coordenadas del punto 3: 4 1
+
+    Esos tres puntos NO estan en la misma linea.
+
+
+Ejercicio 2
+===========
+
+Una persona tiene un nombre *gago* si el nombre de pila y el apellido comienzan con la misma letra. Escriba una función ``esGago`` que dado un string con un nombre/apellido, devuelva ``true`` si es gago.  Por ejemplo, ``esGago("Paco Pimpeta")`` es ``true``, mientras que ``esGago("Rodolfo Mondolfo")`` es ``false``. 
+
+Implemente un *unit test* para la función ``esGago`` y cree una función ``main`` que solo invoque al unit test. 

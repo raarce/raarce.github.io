@@ -1,0 +1,1801 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>&lt;no title&gt; &mdash; Runestone Interactive Overview</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="_static/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/underscore-min.js"></script>
+    <script type="text/javascript" src="_static/lib/lis.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="top" title="Runestone Interactive Overview" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CCOM3033';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="index.html">Runestone Default</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div class="gittip">
+                  <iframe style="border:0;"
+                    src="https://www.gittip.com/bnmnetp/widget.html"
+                    width="48pt" height="22pt" class="gittip-button">
+                  </iframe>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/CCOM3033/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/CCOM3033/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/static/help/bugreports.html'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul class="simple">
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// *******************************************************************
+//                                                                    *
+// Programador:   Alexis Figueroa                    CCOM 3033 Secci?n0U1      *
+// N?mero:        801-14-2408               Primer Semestre 2015-16   *
+// Asignaci?n:    Hora Militar              Prof. Rafael Arce-Nazario *
+// Archivo:       HoraMilitar.cpp           Fecha Entrega: 28/8/15    *
+//                                                                    *
+//******************************************************************  *
+//                                                                    *
+// Prop?sito:     Este programa, dada la hora militar                 *
+//                y la cantidad de horas a?adidas, calcula            *
+//                y despliega la hora final que obtendra el           *
+//                usuario.                                            *
+//                                                                    *
+//********************************************************************
+
+#include <iostream>
+#include <iomanip>
+using namespace std;
+
+int main()
+{
+
+     //Declaraci?n de variables.
+
+     int HoraMili ;  //Hora Militar
+     int A ;         //Horas sin minutos
+     int Min ;           //Minutos separados
+     int HoraAna ;   //Hora A?adida
+     int Horas ;     //Suma de todas las horas
+     int HoraFinal ; //Hora Final
+
+     //Input de Hora Militar.
+
+     cout << "Ingrese la Hora militar ---> " ;
+     cin >> HoraMili ;
+
+     //Separacion de Horas Y Minutos
+
+     A = HoraMili / 100 ;
+     Min = HoraMili % 100 ;
+
+     //Input de Hora A?adida.
+
+     cout << "Ingrese la Hora A?adida ---> " ;
+     cin >> HoraAna ;
+
+     //Resolver para sacar la Hora Final.
+
+     Horas = (A + HoraAna) % 24 ;
+     HoraFinal = Horas * 100 + Min ;
+
+     //Desplegar la Hora Final.
+
+     cout << "La Hora Final es ---> " << HoraFinal << endl << endl ;
+
+
+
+     return 0 ;
+
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// *******************************************************************
+//                                                                    *
+// Programador:   Alexis Figueroa                    CCOM 3033 Secci?n0U1      *
+// N?mero:        801-14-2408               Primer Semestre 2015-16   *
+// Asignaci?n:    1                         Prof. Rafael Arce-Nazario *
+// Archivo:       MinutosMili.cpp           Fecha Entrega: 28/8/15    *
+//                                                                    *
+//******************************************************************  *
+//                                                                    *
+// Prop?sito:     Este programa, dada la Hora Militar y               *
+//                la cantidad de Minutos que se quiere                *
+//                a?adir, calcula y despliega la Hora                 *
+//                Militar Final.                                      *
+//                                                                    *
+//********************************************************************
+
+#include <iostream>
+using namespace std ;
+
+int main()
+{
+
+     //Declaraci?n de variables.
+
+     int HoraMili, MinAna ;    //Hora Militar y Minutos a?adidos.
+     int Horas, MinEX ;            //Separaci?n de Hora y Minutos-HoraMili.
+     int HoraAna, MinMas ;     //Separaci?n de Hora y Minutos-MinAna.
+     int HoraTotal, MinTotal ; //Suma de Horas Y suma de Minutos.
+     int HoraFinal ;           //Hora Final.
+
+     //Ingresa la Hora Militar y los minutos a?adidos.
+
+     cout << "Ingresa la Hora Militar ---> " ;
+     cin >> HoraMili ;
+
+     cout << "Ingresa los Minutos a?adidos ---> " ;
+     cin >> MinAna ;
+
+     //Separaci?n de Hora y Minutos-Hora Militar.
+
+     Horas = HoraMili / 100 ;
+     MinEX = HoraMili % 100 ;
+
+     //Separaci?n de Hora y Minutos-Minutos A?adidos.
+
+     HoraAna = (MinAna + MinEX) / 60  ;
+     MinMas = MinAna % 60 ;
+
+     //Suma de Horas y suma de Minutos.
+
+     HoraTotal = (Horas + HoraAna) % 24 ;
+     MinTotal = (MinEX + MinMas) % 60 ;
+
+     //Resolver para conseguir la Hora Final.
+
+     HoraFinal = HoraTotal * 100 + MinTotal ;
+
+     //Desplegar la Hora Final al usuario.
+
+     cout << "HoraFinal... " << HoraFinal << endl << endl ;
+
+
+     return 0 ;
+
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int HoraMil, HorasPlus, Horas; //HorasPlus es las horas a~adidas.
+    cout <<"Entrar hora militar:"; // Hora militar tiene que ser de cuatro (4) digitos.
+    cin >> HoraMil;
+    cout <<"Entrar Horas A~adidas:";
+    cin >> HorasPlus;
+    Horas = HoraMil + HorasPlus;
+    HoraMil = (Horas * 100) % 24;
+    return HoraMil;
+
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// David John Ortiz Rivera
+// 801-13-4994
+// Asignacion #2 (Hora militar + hora de cambio)
+// Agosto-28-2015
+
+// Objetivo:
+
+// Este programa pide la hora militar y una cantidad
+// de horas (de cambio no militares).
+// Luego imprime la hora militar deseadas.
+
+#include <iostream>
+
+using namespace std;
+
+// Crear funcion main que sera responsable de:
+// inicializar variables (de tipo int), pedirle al usuario las horas,
+// sumar las horas luego de que se altere la hora militar y
+// finalmente desplegar la hora militar deseada.
+
+int main()
+{
+
+// Inicializar variables de tipo int que seran asignadas a las horas ( a = militar y b = de cambio).
+
+    int a, b;
+
+// Pedir al usuario que intruduzca la hora militar.
+
+    cout << "Introduzca la hora militar (de 0 a 2359) == ";
+    cin >> a;
+
+// Pedir al usuario que introduzca la hora de cambio.
+
+    cout << "\nIntroduzca la hora de cambio == ";
+    cin >> b;
+    cout << "*No tiene que ser en el formato militar\n";
+
+// Proceso de cambio de hora.
+
+    int horas = a / 100;
+
+    int minutos = a % 100;
+
+    int hora = (horas + b) % 24;
+
+    int hora_mil = (hora * 100) + minutos;
+
+// Desplegar el resultado
+
+    cout << "\t\nLa hora militar sera == " << hora_mil << "\n";
+
+    return 0;
+
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// David John Ortiz Rivera
+// 801-13-4994
+// Asignacion #2 (Hora militar + minutos de cambio)
+// Agosto-28-2015
+
+// Objetivo:
+
+// Este programa pide la hora militar y una cantidad
+// positiva de minutos imprima la hora que ser? luego de
+// trancurridos los minutos.
+
+#include <iostream>
+
+using namespace std;
+
+// Crear funcion main que sera responsable de:
+// inicializar variables (de tipo int), pedirle al usuario las horas
+// y minutos, sumar las horas con los minutos luego de que se altere
+// la hora militar y finalmente desplegar la hora militar deseada o transcurrida.
+
+int main()
+{
+
+// Inicializar variables de tipo int que seran asignadas
+// a la hora militar y a los minutos ( a = militar y b = minutos).
+
+    int a, b;
+
+// Pedir al usuario que intruduzca la hora militar.
+
+    cout << "Introduzca la hora militar (de 0 a 2359) == ";
+    cin >> a;
+
+// Pedir al usuario que introduzca los minutos de cambio.
+
+    cout << "\nIntroduzca los minutos de cambio (de 0 a 600) == ";
+    cin >> b;
+
+// Proceso de cambio de hora.
+
+    int horas = a / 100;
+
+    int min = b / 60;
+
+    int min1 = b % 60;
+
+    int hora1 = min * 100;
+
+    int min2 = a % 100;
+
+    int minutos = (min1 + min2) % 60;
+
+    int hor = ((min1 + min2) / 60) * 100;
+
+    int hora = ((horas * 100) + hora1 + hor) % 2400;
+
+    int hora_mil = hora + minutos;
+
+// Desplegar el resultado
+
+    cout << "\t\nLa hora militar sera == " << hora_mil << "\n";
+
+    return 0;
+
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// Este programa pide la hora militar y una cantidad
+// de horas. Luego imprime la hora militar que será luego de
+// transcurridas.
+//
+// Diana Pabón Figueroa
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+
+   int time;
+   int timeElapsed;
+
+   cout << "Enter the current military time: ";
+   cin >> time;
+
+   cout << "Enter the elapsed hours:";
+   cin >> timeElapsed;
+
+   int timeHours = time / 100;
+   int timeMinutes = time % 100;
+   int hoursElapsed = (timeHours + timeElapsed) % 24;
+   int finalTime = hoursElapsed * 100 + timeMinutes;
+
+   cout << "The current time is: " << finalTime << endl ;
+
+   return 0;
+
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// Este programa pide la hora militar y una cantidad
+// de minutos. Luego imprime la hora militar que será luego de
+// transcurridas.
+//
+// Diana Pabón Figueroa
+
+#include <iostream>
+#include <string>
+
+using namespace std;
+
+int main()
+{
+
+   int time;
+   int minutesElapsed;
+
+   cout << "Enter the current military time: ";
+   cin >> time;
+
+   cout << "Enter the elapsed minutes:";
+   cin >> minutesElapsed;
+
+   int timeHours = time / 100;
+   int timeMinutes = time % 100;
+   int minutesInHours = minutesElapsed / 60;
+   int remainingMinutes = minutesElapsed % 60;
+   int hoursElapsed = (timeHours + minutesInHours) % 24;
+   int totalMinutesElapsed = timeMinutes + remainingMinutes;
+   int finalTime = hoursElapsed * 100 + totalMinutesElapsed;
+
+   cout << "The current time is: " << finalTime << endl ;
+
+   return 0;
+
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+/* Este programa pide la hora militar y una cantidad de horas.
+ * Luego imrpime la hora militar que sera luego de transcurrir las horas.
+ *
+ * Gabriela Bauza Ocasio
+ */
+
+#include <iostream>
+
+ using namespace std;
+
+ int main() {
+     int horaMilitar, horasAnadidas, horas, minutos;
+
+     cout << "Cual es la hora inicial en formato militar?" << endl;
+     cin >> horaMilitar;
+
+     cout << "Cual es la cantidad de horas que quieres transcurrir?" << endl;
+     cin >> horasAnadidas;
+
+     horas = horaMilitar / 100; //Separa las horas solamente.
+     minutos = horaMilitar % 100; //Separa los minutos solamente.
+
+     horas = (horas + horasAnadidas) % 24; //A~ade las horas y asegura que no pase de 23.
+
+     horaMilitar = horas * 100 + minutos; //Reombina las horas con los minutos.
+
+     cout << "La hora es: " << horaMilitar << endl;
+
+     return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+/* Este programa pide la hora militar y una cantidad de minutos.
+ * Luego imrpime la hora militar que sera luego de transcurrir los minutos.
+ *
+ * Gabriela Bauza Ocasio
+ */
+
+#include <iostream>
+
+ using namespace std;
+
+ int main() {
+     int horaMilitar, minutosAnadidos, horas, minutos;
+
+     cout << "Cual es la hora inicial en formato militar?" << endl;
+     cin >> horaMilitar;
+
+     cout << "Cual es la cantidad de minutos que quieres transcurrir?" << endl;
+     cin >> minutosAnadidos;
+
+     horas = horaMilitar / 100; //Separa las horas solamente.
+     minutos = horaMilitar % 100; //Separa los minutos solamente.
+
+     horas = (horas + ((minutosAnadidos + minutos) / 60)) % 24; //Verifica si hubo un
+                                                                                                                        //cambio en la hora y
+                                                                                                                        //lo a~ade, y asegura
+                                                                                                                        //no se pase de 23.
+     minutos = (minutos + minutosAnadidos) % 60; //A~ade los minutos y asegura que
+                                                                                         //no se pase de 59.
+
+     horaMilitar = horas * 100 + minutos; //Recombina las horas con los minutos.
+
+     cout << "La hora es: " << horaMilitar << endl;
+
+     return 0;
+ }
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+/*
+Este programa pide una hora (formato militar) y una cantidad de hora (forma cotidiana) a sumar
+y calcula el resultante
+
+Grabiel A. Rodriguez Linera
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int horaMilitar, horaAnadida, horas, minutos;
+
+    cout << "Entre una hora en hora militar: ";
+    cin >> horaMilitar;
+
+    cout << "Entre las horas que quieres sumar: ";
+    cin >> horaAnadida;
+
+    horas = horaMilitar/100;
+    minutos = horaMilitar%100;
+
+    horas = (horas + horaAnadida)%24;
+
+    horaMilitar = horas * 100 + minutos;
+
+
+    cout << horaMilitar << endl;
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+/*
+Este programa pide una hora (formato militar) y una cantidad de minutos a sumar
+y calcula la hora resultante
+
+Grabiel A. Rodriguez Linera
+*/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int horaMilitar, horaAnadida, horas, minutos, horasA, minutosA, minutosExtra;
+
+    cout << "Entre la hora: ";
+    cin >> horaMilitar;
+
+    cout << "Entre los minutos a sumar: ";
+    cin >> horaAnadida;
+
+    horas = horaMilitar/100;
+    minutos = horaMilitar%100;
+    horasA = horaAnadida/60;
+    minutosA = horaAnadida%60;
+
+    minutosExtra = (minutos + minutosA)/60;
+    minutos = (minutos + minutosA)%60;
+
+
+    horaMilitar = ((horas + horasA + minutosExtra)%24) * 100 + minutos;
+
+    cout << horaMilitar << endl;
+
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+/* Este programa pide la hora militar y una cantidad
+   de horas. Luego imprime la hora militar que ser? luego de
+   transcurridas.
+
+   Glorisel Bret?n Peroza */
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+     int hmilitar, hanadida, horas, minutos ;
+
+     cout << "Por favor ingrese la hora en formato militar: " ;
+     cin >> hmilitar;
+
+     cout << "Ingrese la cantidad de horas que desea anadir: " ;
+     cin >> hanadida ;
+
+     horas = hmilitar / 100 ;
+
+     minutos = hmilitar % 100 ;
+
+     horas = (horas + hanadida) % 24 ;
+
+     hmilitar = horas * 100 + minutos ;
+
+     cout << "La hora es: " << hmilitar ;
+
+return 0 ;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+/* Este programa pide la hora militar y una cantidad
+   de minutos que se desea a?adir.
+   Luego imprime la hora militar que ser? luego de
+   los minutos transcurridos.
+
+   Glorisel Bret?n Peroza */
+
+#include <iostream>
+
+using namespace std;
+
+int main() {
+
+     int hmilitar, manadidos, horas, minutos, minA, minB ;
+
+     cout << "Por favor ingrese la hora en formato militar: " ;
+     cin >> hmilitar;
+
+     cout << "Ingrese la cantidad de minutos que desea anadir: " ;
+     cin >> manadidos ;
+
+     horas = hmilitar / 100 ;
+
+     minutos = hmilitar % 100 ;
+
+     minA = (minutos + manadidos) / 60 ;
+
+     minB = (minutos + manadidos) % 60 ;
+
+     horas = (horas + minA) % 24 ;
+
+     hmilitar = horas * 100 + minB ;
+
+     cout << "La hora es: " << hmilitar ;
+
+return 0 ;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+//-------------------------------------------------------------------------------------------------
+//Nombre: Jesus Aponte Rodriguez                                    CCOM-3033-0U1
+//Numero: 801-14-0370                                               Prof. Rafael Arce
+//Asignacion: 2-B                                                    Fecha:30-ago-2015
+//-------------------------------------------------------------------------------------------------
+//Este programa dado una hora en fortmato militar y una suma de horas permite obtener
+//el total de horas por suma.
+//-------------------------------------------------------------------------------------------------
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+
+    int horaMilitar, horaAnadidas, horas, minutos ;
+
+    cout << "Ingrese la hora en formato militar: " << endl ;
+    cin  >> horaMilitar ;
+
+    cout << "Ingrese las horas que se le sumaran a la anterior: " << endl;
+    cin  >> horaAnadidas ;
+
+    horas = horaMilitar / 100 ;
+    minutos = horaMilitar % 100 ;
+    horas = (horas + horaAnadidas) % 24 ;
+    horaMilitar = horas * 100 + minutos ;
+
+    cout << horaMilitar << endl;
+
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+//-------------------------------------------------------------------------------------------------
+//Nombre: Jesus Aponte Rodriguez                                    CCOM-3033-0U1
+//Numero: 801-14-0370                                               Prof. Rafael Arce
+//Asignacion: 2-B                                                   Fecha:30-ago-2015
+//-------------------------------------------------------------------------------------------------
+//Este programa dado una hora en fortmato militar y una cantidad de minutos permite obtener
+//el total de la suma de ambos.
+//-------------------------------------------------------------------------------------------------
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+   int horaMilitar, horaAnadidas, horas, minutos, totalMinutos, totalMinutos1, totalMinutos2 ;
+
+   cout << "Ingrese la hora militar en un numero de 4 digitos: " << endl ;
+   cin  >> horaMilitar ;
+
+   cout << "Ingrese la cantidad positiva de minutos: " << endl ;
+   cin  >> horaAnadidas ;
+
+   horas = horaMilitar / 100 ;
+   minutos = horaMilitar % 100 ;
+
+   horas = (horas + horaAnadidas) % 24 ;
+
+   totalMinutos1 = (minutos + horaAnadidas) / 60 ;
+   totalMinutos2 = (minutos + horaAnadidas) % 60 ;
+   totalMinutos = totalMinutos1 + totalMinutos2 ;
+   horaMilitar = (horas + totalMinutos) ;
+
+   cout << horaMilitar * 100 << endl ;
+
+
+   return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+/*     Jose R. Martinez Rivera
+           801-12-4560
+           CCOM3033-0U1
+           Prof R. Arce
+
+   Este programa pide la hora militar como entero
+   de 4 digitos y una cantidad de horas. Luego imprime
+   la hora militar que sera al cabo de esas horas.
+*/
+
+
+
+
+
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    // Variables para las horas.
+
+    int HoraMilitar, HoraAnadidas, Horas, Minutos;
+
+    // Ingresar Hora Militar y Hora Anadidas.
+
+    cout <<"Ingrese Hora Militar:  ";
+
+    cin >>HoraMilitar;
+
+    cout <<"Ingrese Hora que deseas Anadir:  ";
+
+    cin >>HoraAnadidas;
+
+    // Calcular Hora Militar mas la Hora Anadida.
+
+    Horas = HoraMilitar/100;
+
+    Minutos = HoraMilitar%100;
+
+    Horas = (Horas+HoraAnadidas)%24;
+
+    HoraMilitar = Horas*100 + Minutos;
+
+    // Desplegar la Hora Militar nueva.
+
+    cout << HoraMilitar;
+
+
+
+
+    return 0;
+
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+/*     Jose R. Martinez Rivera
+           801-12-4560
+           CCOM3033-0U1
+           Prof R. Arce
+
+   Este programa pide la hora militar como entero
+   de 4 digitos y una cantidad de minutos. Luego imprime
+   la hora militar con los minutos anadidos.
+*/
+
+
+
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+     // Variables para las hora y minutos.
+
+    int HoraMilitar, MinutosAnadidos, Horas, Minutos, MinutosAdd, MinutosRes;
+
+    // Ingresar Hora Militar y Minutos Anadidos.
+
+    cout <<"Ingrese Hora Militar:  ";
+
+    cin >>HoraMilitar;
+
+    cout <<"Ingrese minutos que deseas Anadir:  ";
+
+    cin >>MinutosAnadidos;
+
+    // Calcular Hora Militar nueva mas los Minutos Anadidos.
+
+    Horas = HoraMilitar/100;
+
+    Minutos = HoraMilitar%100;
+
+    MinutosAdd = (Minutos + MinutosAnadidos)%60;
+
+    MinutosRes = (Minutos + MinutosAnadidos)/60;
+
+    Horas = (Horas + MinutosRes)%24;
+
+    HoraMilitar = (Horas*100 + MinutosAdd);
+
+    // Desplegar la Hora Militar nueva.
+
+
+    cout << HoraMilitar;
+
+
+
+
+    return 0;
+
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+/*
+Juan A. Fuentes Rosa 801-12-2850
+Objective: Create a program that asks the user the time in a military format and also asks how many more hours,
+           to later calculate the new hour based on the hour difference attained in the equation.
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    /*
+    Variable definition:Integer variables are assiged to eight variables to have whole number results.
+    */
+    int Hour, ExtraHours, FinalHour,Minutes, MinutesA, MinutesB, HoursA, HoursB;
+
+    /*
+    Input and Output Explination: Ask the user for the military time and the aditional time to add, to find the new time.
+    */
+    cout << "Enter the Time in military format: "<< endl;
+    cin  >> Hour;
+    cout << "Enter the additional time in a military format,you want to add:" << endl;
+    cin  >> ExtraHours;
+    /*
+    Equation Explination:Separated each value of hours and minutes to then multiply and modulate them to demonstrate an actual time.
+    */
+    HoursA= Hour/100;
+    HoursB= ExtraHours/100;
+    MinutesA=Hour%100;
+    MinutesB=ExtraHours%100;
+    Minutes= MinutesA +MinutesB;
+    Hour=((HoursA + HoursB+ Minutes/60)%24)*100;
+    Minutes= Minutes%60;
+    FinalHour= Hour + Minutes;
+
+    cout << "The final Time is : " << FinalHour << endl;
+
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+/*
+Juan A. Fuentes Rosa 801-12-2850
+Objective: Create a program that asks the user the time in a military format and the minutes to be added,
+           to later calculate the new hour based on the hour difference attained in the equation.
+*/
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    /*
+    Variable definition:Integer variables are assiged to eight variables to have whole number results.
+    */
+    int Hour, Extraminutes, FinalHour,Minutes, MinutesA, MinutesB, HoursA, HoursB;
+
+    /*
+    Input and Output Explination: Ask the user for the military time and the aditional time, in minutes, to add, to find the new time.
+    */
+    cout << "Enter the Time in military format: "<< endl;
+    cin  >> Hour;
+    cout << "Enter the additional minutes, to calculate what time it would be with the minutes added:" << endl;
+    cin  >> Extraminutes;
+    /*
+    Equation Explination:Separated each value of hours and minutes to then multiply and modulate them to
+                         add them together later, demonstrate an actual time.
+    */
+    HoursA= Hour/100;
+    HoursB= Extraminutes/60;
+    MinutesA= Hour%100;
+    MinutesB= Extraminutes%60;
+    Minutes = MinutesA + MinutesB;
+    FinalHour= ((HoursA+HoursB+(Minutes/60))%24)*100;
+    Minutes= Minutes%60;
+    FinalHour = FinalHour + Minutes;
+
+    cout << "The final Time is : " << FinalHour << endl;
+
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// HW2 Part 1
+// Purpose of the program:
+// This program given the military time and a
+// positive amount of hours that will be added
+// will calculate the military time desired.
+// Julio Rivera 801-12-7440
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    int MilitaryTime, HoursAdded, Hour, Min;
+    cout << "Enter the military time: ";
+    cin >> MilitaryTime;
+    cout << "Enter the amount of hours that will be added: ";
+    cin >> HoursAdded;
+
+    Hour = MilitaryTime / 100;
+    Min = MilitaryTime % 100;
+    Hour = (Hour + HoursAdded) % 24;
+    MilitaryTime = Hour * 100 + Min;
+
+    cout << "The military time desired is: " << MilitaryTime << endl;
+
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// HW2 Part 2
+// Purpose of the program:
+// This program given the military time and a
+// positive amount of minutes that will be added,
+// will calculate the military time desired.
+// Julio Rivera 801-12-7440
+
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main() {
+    int MilitaryTime, MinsAdded, Hour, Min, MinsInHours, MinsRes;
+    cout << "Enter the military time: ";
+    cin >> MilitaryTime;
+    cout << "Enter the amount of minutes that will be added: ";
+    cin >> MinsAdded;
+
+    Hour = MilitaryTime / 100;
+    Min = MilitaryTime % 100;
+    MinsInHours = (Min + MinsAdded) / 60;
+    MinsRes = (Min + MinsAdded) % 60;
+    Hour = (Hour + MinsInHours) % 24;
+    MilitaryTime = Hour * 100 + MinsRes;
+
+    cout << "The military time desired is: " << MilitaryTime << endl;
+
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// Este Programa pide la hora Militar y una cantidad
+// de horas. Luego imprime la hora militar que será luego de
+// transcurridas.
+//
+// Kevin Román Segarra
+// 801-14-7100
+// 28 de agosto de 2015
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    // Declarar las variables:
+    int horaMilitar, horaAdd, horas, minutos;
+
+    // Desplegar el propósito del programa
+    cout << "Este Programa pide la hora militar y una cantidad de horas. " << endl
+         << "Luego imprime la hora militar que sera al cabo de esas horas." << endl << endl;
+
+    // Entre  la hora miliar
+    cout << "Escribe la hora militar: ";
+    cin >> horaMilitar;
+
+    // Entre una cantidad de horas añadidas
+    cout << "Escribe una cantidad de horas que desees agregar: ";
+    cin >> horaAdd;
+
+    // Saca la hora que hay en la hora militar
+    horas = horaMilitar / 100 ;
+
+    // Saca los minutos que hay en la hora militar
+    minutos = horaMilitar % 100 ;
+
+    // Calcula la hora con las horas añadidas para determinar la hora actual
+    horas = (horas + horaAdd) % 24 ;
+
+    // Calcula la hora Militar actual
+    horaMilitar = horas * 100 + minutos ;
+
+    // Imprime la hora militar actual
+    cout << "La hora militar actual es: " << horaMilitar <<endl;
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// Este programa pide la hora militar y una cantidad positiva de minutos.
+// Luego imprime la hora que será luego trancurridos los minutos.
+//
+// Kevin Román Segarra
+// 801-14-7100
+// 28 de agosto de 2015
+
+#include <iostream>
+
+using namespace std;
+
+int main(){
+    // Declarar variables
+    int horaMilitar, horas, hora_Min, minAdd, minutos, minTotal ;
+
+    // Desplega el propósito del programa
+    cout << "Este Programa que pide la hora militar y una cantidad " << endl
+         << "positiva de minutos. Luego imprime la hora militar " << endl
+         << "que sera luego transcurridos los minutos." << endl << endl ;
+
+    // Ente la hora militar
+    cout << "Escribe la hora militar: " ;
+    cin >> horaMilitar ;
+
+    // Entre la cantidad positiva de minutos
+    cout << "Escribe una cantidad positiva de minutos: " ;
+    cin >> minAdd ;
+
+    // Saca la hora que hay en la hora militar
+    horas = horaMilitar / 100 ;
+
+    // Saca los minutos  que hay en la hora militar
+    minutos = horaMilitar % 100 ;
+
+    // Calcula los minutos con los minutos añadidos
+    minTotal = (minAdd + minutos) % 60 ;
+    hora_Min= (minAdd + minutos) / 60 ;
+
+    // Calcula la hora con los minutos añadidos para determinar la hora actual
+    horas = (horas + hora_Min) % 24 ;
+
+    // Calcula la hora militar actual
+    horaMilitar = horas * 100 + minTotal ;
+
+    // Imprime la hora militar actual
+    cout << "La hora militar actual es: " << horaMilitar << endl ;
+
+    return 0 ;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// Luis E. Martinez Rodriguez
+//Calcular hora militar dado la hora actual y horas a añadir.
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    int a, b, c, d; // a es horamilitar, b es horas añadidas,
+                    // c es horas, d es minutos
+
+    cout << "Entre hora militar(4 digitos): ";
+    cin >> a;
+    cout << "Entre horas añadidas: ";
+    cin >> b;
+    c = a/100;
+    d = a%100;
+    c = (c+b)%24;
+    a = c*100 + d;
+    cout << "Hora Militar es: " << a << endl; //output
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// Luis E. Martinez Rodriguez
+//Calcular hora militar dado la hora actual y minutos a añadir.
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+    int a, b, c, d, e, f; // a es hora militar, b es minutos añadidos
+                          // c es horas de a, d es minutos de a,
+                          // e es horas de b, f es minutos de b
+    cout << "Entre hora militar(4 digitos): ";
+    cin >> a;
+    cout << "Entre minutos a añadir: ";
+    cin >> b;
+    c = a/100;
+    d = a%100;
+    e = b/60;
+    f = b%60;
+    c = (c+e)%24;
+    a = c*100 + ((d+f)/60)*100 + (d+f)%60;
+    cout << "Hora militar es: " << a << endl;
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// Este programa pide la hora militar y una cantidad
+// de horas e imprime la hora militar que será luego de
+// transcurridas esas horas.
+//
+// Natalia M. Pacheco Tallaj
+
+#include <iostream>
+using namespace std;
+
+int main(){
+     cout << "Este programa te pedira la hora actual y una cantidad"
+          << " de horas para calcular la hora militar despues de que"
+          << " hayan transcurrido esas horas." << endl;
+
+     int hm, ha; //hm es la hora militar, ha es la hora para anadirle
+     cout << "Entre la hora actual como hora militar de 4 digitos: ";
+     cin >> hm; //input la hora inicial
+     cout << "?Cuantas horas le quiere anadir?: ";
+     cin >> ha; //input la hora anadida
+
+     hm = (hm + 100 * ha) % 2400; //convierte ha al formato de hora militar,
+                               //la anade a hm y toma modulo 2400,
+                               //equivalente a modulo 24 horas
+     cout << "Dentro de " << ha << " horas seran las " << hm << endl;
+
+     return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// Este programa pide la hora militar y una cantidad
+// de minutos e imprime la hora militar que será luego de
+// transcurridos esos minutos.
+//
+// Natalia M. Pacheco Tallaj
+
+#include <iostream>
+using namespace std;
+
+int main(){
+        cout << "Este programa te pedira la hora actual y una cantidad"
+             << " de minutos para calcular la hora despues de que esos"
+             << " minutos hayan transcurrido." << endl;
+
+        int hora_militar, minutos_anadidos;
+           int hi, mi, ha, ma; //hora inicial, minutos iniciales,
+                                           //horas anadidas, minutos anadidos
+
+           cout << "Entre la hora actual como hora militar de 4 digitos: ";
+        cin >> hora_militar; //input la hora inicial
+        cout << "?Cuantos minutos le quiere anadir?: ";
+        cin >> minutos_anadidos; //input los minutos anadidos
+
+        hi = hora_militar / 100;
+        mi = hora_militar % 100;
+        ha = minutos_anadidos / 60;
+        ma = minutos_anadidos % 60;
+
+        ha = hi + ha + (mi + ma) / 60;
+        ma = (mi + ma) % 60;
+
+        hora_militar = (ha) * 100 + (ma);
+        hora_militar = hora_militar % 2400;
+
+             cout << "Dentro de " << minutos_anadidos << " minutos seran las "
+                  << hora_militar << endl;
+
+        return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+#include <iostream>
+// Nicolas Torres Suris 801-14-8180
+
+// Asignacion: Crear un programa que dada la hora militar expresada
+// como un entero de 4 digitos y una cantidad de horas (en minutos) imprima la hora
+// que sera al cabo de esas horas.
+
+// Sumar Minutos
+using namespace std;
+
+int main()
+{
+    //El usuario entrara la hora militar
+    int HoraMil, MinsSuma, Horas, Mins, MinsAHora, MinsRest, HoraFinal;
+
+    //Entre la hora (mencione si es hora militar u hora estandar). <<(Seria switch/case el prog)>>
+    cout<<"Este programa te permitira sumar la hora militar. "<<endl;
+    cout<<"Entre la hora."<<endl;
+    cin>>HoraMil;
+
+    //Usuario entrara los minutos que quiere sumarle a la hora. Se debera entrar el total de minutos.
+    cout<<"Entre el total de minutos que desea sumar."<<endl;
+    cin>>MinsSuma;
+    //Estas equaciones nos permitiran guardar las horas y los minutos aparte, y poder sumarle el tiempo deseaso con presicion.
+
+
+    Horas = HoraMil/100;
+    Mins = HoraMil%100;
+    MinsAHora = MinsSuma/60;
+    MinsRest = MinsSuma%60;
+
+
+    HoraFinal = (((((Horas + MinsAHora) + ((Mins+MinsRest)/60))%24)*100)  + ((Mins + MinsRest)%60));
+
+
+    cout<<"La hora final seria:"<<endl;
+    cout<<HoraFinal<<endl;
+
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+#include <iostream>
+// Nicolas Torres Suris 801-14-8180
+
+
+/* Asignacion: Crear un programa que dada la hora militar expresada
+   como un entero de 4 digitos y una cantidad de horas imprima la hora
+   que sera al cabo de esas horas.*/
+
+// Sumar Horas
+using namespace std;
+
+int main()
+{
+    //El usuario entrara la hora militar
+    int HoraMil, HoraAdd, Horas, Mins, HoraFinal;
+
+    //Entre la hora
+    cout<<"Este programa te permitira sumar la hora militar. "<<endl;
+    cout<<"Entre la hora."<<endl;
+    cin>>HoraMil;
+
+    //Usuario entrara la hora que quiere sumarle (entre horas solamente). Entrar la hora en el siguiente formato: 0000.
+    cout<<"Entre las horas que desea sumar."<<endl;
+    cin>>HoraAdd;
+
+    //Estas equaciones nos permitiran guardar las horas y los minutos aparte, y poder sumarle el tiempo deseaso con presicion.
+    Horas = HoraMil/100;
+    Mins = HoraMil%100;
+
+
+    HoraFinal = ((((Horas + HoraAdd/100)%24)*100) +(Mins));
+
+
+    cout<<"La hora final seria:"<<endl;
+    cout<<HoraFinal<<endl;
+
+
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+//Programa para calcular la hora luego
+//de ciertas horas transcurridas
+//Nicole A. Rosario Nieves
+#include <iostream>
+#include <cmath>
+
+using namespace std;
+
+int main()
+{
+    //Definir variables
+    int hM, hA, hrs, min;
+    //Obtener hora inicial y horas transcurridas
+    cout<<"Entre la hora militar:";
+    cin>>hM;
+    cout<<"Entre el numero de horas transcurridas:";
+    cin>>hA;
+    //Dividir hM entre horas y minutos
+    hrs=hM/100;
+    min=hM%100;
+    //Sumar horas transcurridas
+    hrs=(hrs+hA)%24;
+    //Anadir horas y minutos
+    hM=(hrs*100)+min;
+    //Imprimir hora militar
+    cout<<"La hora es:"<<hM<<endl;
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+/*
+Programa para calcular la hora luego
+de ciertas horas transcurridas
+Nicole A. Rosario Nieves
+*/
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    //Definir variables
+    int hM, mA, hrs, min;
+    //Obtener hora inicial y minutos transcurridas
+    cout<<"Entre la hora militar:";
+    cin>>hM;
+    cout<<"Entre los minutos transcurridos:";
+    cin>>mA;
+    //Dividir hM entre horas y minutos
+    hrs=hM/100;
+    min=hM%100;
+    //Encontrar total de horas y minutos transcurridos
+    mA=min+mA;
+    hrs=(hrs+(mA/60))%24;
+    min=mA%60;
+    //Anadir horas y minutos
+    hM=(hrs*100)+min;
+    //Imprimir hora militar
+    cout<<"La hora es:"<<hM<<endl;
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// Este programa dada la Hora Militar expresada como un entero de 4 digitos
+// y una cantidad de horas, imprime la hora que sera al cabo de esas horas
+//
+// Sergio Ruben Cepeda
+
+#include <iostream>
+
+using namespace std;
+
+int main()
+{
+    int HoraMilitar, HoraAnadidas, horas, minutos;
+
+    cout << "Ingrese la Hora Militar y la cantidad de horas" << endl;
+
+    cout << "Hora Militar: ";
+    cin  >> HoraMilitar ;
+    cout << "Hora Anadidas: " ;
+    cin  >> HoraAnadidas ;
+
+    horas = HoraMilitar / 100;
+    minutos = HoraMilitar % 100;
+    horas = (horas + HoraAnadidas) % 24;
+
+    HoraMilitar = horas * 100 + minutos;
+
+    cout << "La hora es: " << HoraMilitar << endl;
+
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// Este programa dada la Hora Militar expresada como un entero de 4 digitos
+// y una cantidad de minutos, imprime la hora que sera al cabo de esos minutos
+//
+// Sergio Ruben Cepeda
+
+#include <iostream>
+#include <iomanip>
+
+using namespace std;
+
+int main()
+{
+    int HoraMilitar, HoraAnadidas, horas, minutos, MinAnadido,
+        MinRestantes, MinutosFinal, HoraFinal;
+
+    cout << "Ingrese la Hora Militar y la cantidad de minutos:" << endl;
+
+    cout << "Hora Militar: ";
+    cin  >> HoraMilitar ;
+    cout << "Minutos Anadidos: " ;
+    cin  >> MinAnadido ;
+
+    horas = HoraMilitar / 100 ;
+    minutos = HoraMilitar % 100 ;
+
+    MinRestantes = MinAnadido % 60;
+    HoraAnadidas = (MinAnadido + minutos) / 60;
+
+    HoraFinal= (horas + HoraAnadidas) % 24;
+    MinutosFinal = (minutos + MinRestantes) % 60;
+
+    HoraMilitar = HoraFinal * 100 + MinutosFinal;
+
+    cout << "La hora es: "  << setw(4) << setfill('0') << HoraMilitar << endl;
+
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// Walter Baez Laguna
+// 801-13-0508
+// CCOM 3033
+// Prof. R. Arce
+// viernes 28 de agosto del 2015
+
+// Este programa dado una hora militar expresada como un entero de 4 digitos y una cantidad de horas, despliega
+// la hora que sera al cabo de esas horas.
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+
+   // Variables
+
+   int hrM, hrA, hrs, mins;
+
+   // Ingresar la hora militar y las agregadas
+
+   cout << "Ingrese la hora militar como un entero de 4 digitos: ";
+   cin >> hrM;
+
+   cout << "Ingrese las horas que quiere agregar a la militar: ";
+   cin >> hrA;
+
+   // Proceso para determinar la hora militar final
+
+   hrs = hrM / 100;
+   mins = hrM % 100;
+
+   hrs = (hrs + hrA) % 24;
+   hrM = hrs * 100 + mins;
+
+   // Desplegar la hora militar final
+
+   cout << "La hora militar final sera: " << hrM << endl ;
+
+    return 0;
+}
+</textarea>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='1000 4'  >
+// Walter Baez Laguna
+// 801-13-0508
+// CCOM 3033
+// Prof. R. Arce
+// viernes 28 de agosto del 2015
+
+// Este programa dado una hora militar expresada como un entero de 4 digitos y una cantidad de minutos, despliega
+// la hora que sera al cabo de esos minutos.
+
+#include <iostream>
+#include <cmath>
+using namespace std;
+
+int main()
+{
+   // Variables
+
+   int hrM, hrs, minA, mins, hrsA, minT, hrsR;
+
+   // Ingresar la hora militar y las agregadas
+
+   cout << "Ingrese la hora militar como un entero de 4 digitos: ";
+   cin >> hrM;
+   cout << "Ingrese los minutos que quiere agregar a la hora militar: ";
+   cin >> minA;
+
+   // Proceso para determinar la hora militar final
+
+   hrs = hrM / 100;
+   mins = hrM % 100;
+
+   minT = mins + minA;
+
+   minA = minT % 60;
+   hrsA = minT / 60;
+
+   hrsR = ((hrs + hrsA) % 24) * 100 + minA;
+
+   // Desplegar la hora militar final
+
+   cout << "La hora militar final sera: " << hrsR << endl ;
+
+    return 0;
+}
+</textarea>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015 director.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

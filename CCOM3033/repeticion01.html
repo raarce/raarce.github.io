@@ -1,0 +1,552 @@
+<!DOCTYPE html>
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>Estructuras de repetición: while &mdash; Runestone Interactive Overview</title>
+    
+    <link rel="stylesheet" href="_static/basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-3.0.0/css/bootstrap.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/activecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/fitb.css" type="text/css" />
+    <link rel="stylesheet" href="_static/clickable.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pytutor.css" type="text/css" />
+    <link rel="stylesheet" href="_static/modal-basic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/datafile.css" type="text/css" />
+    <link rel="stylesheet" href="_static/dragndrop.css" type="text/css" />
+    <link rel="stylesheet" href="_static/codemirror.css" type="text/css" />
+    <link rel="stylesheet" href="_static/livecode.css" type="text/css" />
+    <link rel="stylesheet" href="_static/parsons.css" type="text/css" />
+    <link rel="stylesheet" href="_static/lib/prettify.css" type="text/css" />
+    <link rel="stylesheet" href="_static/poll.css" type="text/css" />
+    <link rel="stylesheet" href="_static/tabbedstuff.css" type="text/css" />
+    <link rel="stylesheet" href="_static/video.css" type="text/css" />
+    <link rel="stylesheet" href="_static/jquery-ui-1.10.3.custom.min.css" type="text/css" />
+    <link rel="stylesheet" href="_static/bootstrap-sphinx.css" type="text/css" />
+    <link rel="stylesheet" href="_static/user-highlights.css" type="text/css" />
+    <link rel="stylesheet" href="_static/runestone-custom-sphinx-bootstrap.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/runestonebase.js"></script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <script type="text/javascript" src="_static/jquery.highlight.js"></script>
+    <script type="text/javascript" src="_static/bookfuncs.js"></script>
+    <script type="text/javascript" src="_static/codemirror.js"></script>
+    <script type="text/javascript" src="_static/xml.js"></script>
+    <script type="text/javascript" src="_static/css.js"></script>
+    <script type="text/javascript" src="_static/htmlmixed.js"></script>
+    <script type="text/javascript" src="_static/python.js"></script>
+    <script type="text/javascript" src="_static/javascript.js"></script>
+    <script type="text/javascript" src="_static/activecode.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/animationbase.js"></script>
+    <script type="text/javascript" src="_static/mchoice.js"></script>
+    <script type="text/javascript" src="_static/timedmc.js"></script>
+    <script type="text/javascript" src="_static/fitb.js"></script>
+    <script type="text/javascript" src="_static/timedfitb.js"></script>
+    <script type="text/javascript" src="_static/timed.js"></script>
+    <script type="text/javascript" src="_static/clickable.js"></script>
+    <script type="text/javascript" src="_static/timedclickable.js"></script>
+    <script type="text/javascript" src="_static/d3.v2.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.ba-bbq.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.jsPlumb-1.3.10-all-min.js"></script>
+    <script type="text/javascript" src="_static/pytutor.js"></script>
+    <script type="text/javascript" src="_static/codelens.js"></script>
+    <script type="text/javascript" src="_static/skulpt.min.js"></script>
+    <script type="text/javascript" src="_static/skulpt-stdlib.js"></script>
+    <script type="text/javascript" src="_static/datafile.js"></script>
+    <script type="text/javascript" src="_static/dragndrop.js"></script>
+    <script type="text/javascript" src="_static/timeddnd.js"></script>
+    <script type="text/javascript" src="_static/livecode.js"></script>
+    <script type="text/javascript" src="_static/clike.js"></script>
+    <script type="text/javascript" src="_static/lib/jquery.min.js"></script>
+    <script type="text/javascript" src="_static/lib/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="_static/lib/prettify.js"></script>
+    <script type="text/javascript" src="_static/lib/underscore-min.js"></script>
+    <script type="text/javascript" src="_static/lib/lis.js"></script>
+    <script type="text/javascript" src="_static/parsons.js"></script>
+    <script type="text/javascript" src="_static/parsons-noconflict.js"></script>
+    <script type="text/javascript" src="_static/poll.js"></script>
+    <script type="text/javascript" src="_static/reveal.js"></script>
+    <script type="text/javascript" src="_static/shortanswer.js"></script>
+    <script type="text/javascript" src="_static/tabbedstuff.js"></script>
+    <script type="text/javascript" src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script type="text/javascript" src="_static/jquery-ui-1.10.3.custom.min.js"></script>
+    <script type="text/javascript" src="_static/jquery-fix.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-3.0.0/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="_static/bootstrap-sphinx.js"></script>
+    <script type="text/javascript" src="_static/waypoints.min.js"></script>
+    <script type="text/javascript" src="_static/rangy-core.js"></script>
+    <script type="text/javascript" src="_static/rangy-textrange.js"></script>
+    <script type="text/javascript" src="_static/rangy-cssclassapplier.js"></script>
+    <script type="text/javascript" src="_static/user-highlights.js"></script>
+    <script type="text/javascript" src="_static/jquery.idle-timer.js"></script>
+    <script type="text/javascript" src="_static/processing-1.4.1.min.js"></script>
+    <script type="text/javascript" src="_static/jquery.hotkey.js"></script>
+    <script type="text/javascript" src="_static/jquery-migrate-1.2.1.min.js"></script>
+    <link rel="top" title="Runestone Interactive Overview" href="index.html" />
+<meta charset='utf-8'>
+<meta http-equiv='X-UA-Compatible' content='IE=edge,chrome=1'>
+<meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0' name='viewport' />
+<script type="text/javascript">
+  eBookConfig = {};
+  eBookConfig.host = 'http://127.0.0.1:8000' ? 'http://127.0.0.1:8000' : 'http://127.0.0.1:8000';
+  eBookConfig.app = eBookConfig.host+'/runestone';
+  eBookConfig.ajaxURL = eBookConfig.app+'/ajax/';
+  eBookConfig.course = 'CCOM3033';
+  eBookConfig.logLevel = 0;
+  eBookConfig.loginRequired = false;
+  eBookConfig.build_info = "unknown";
+  eBookConfig.isLoggedIn = false;
+  eBookConfig.useRunestoneServices = false;
+  eBookConfig.python3 = false;
+</script>
+
+<div id="fb-root"></div>
+<script>
+  (function(d, s, id) {
+    var js, fjs = d.getElementsByTagName(s)[0];
+    if (d.getElementById(id)) return;
+    js = d.createElement(s); js.id = id;
+    js.src = "//connect.facebook.net/en_US/all.js#xfbml=1&status=0";
+    fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+</script>
+
+
+
+  </head>
+  <body role="document">
+
+
+<!-- Begin navbar -->
+<div id="navbar" class="navbar navbar-default navbar-fixed-top" role="navigation">
+
+  <div class="container">
+
+    <div class="navbar-header">
+      <!-- .btn-navbar is used as the toggle for collapsed navbar content -->
+      <button type='button' class='navbar-toggle' data-toggle="collapse" data-target=".navbar-ex1-collapse">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+
+      <div>
+        <a class="brand-logo" style='background: transparent url("_static/img/logo_small.png") no-repeat 0px 0px;' href="/runestone/default/user/login">&nbsp; </a>
+        <a class="navbar-brand" href="index.html">Runestone Default</a>
+      </div>
+    </div>
+
+    <div class="navbar-collapse collapse navbar-ex1-collapse">
+
+      <ul class="nav navbar-nav navbar-right">
+
+        <li class="divider-vertical"></li>
+
+        <!-- social media dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-share-alt" style="opacity: 0.9"></i>
+          </a>
+          <ul class="dropdown-menu social-menu">
+              <li>
+                <div>
+                  <b>Runestone in social media:</b>
+                </div>
+                <a href="https://twitter.com/iRunestone" class="twitter-follow-button" data-show-count="true">Follow @iRunestone</a><script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+                <div class="fb-like" data-href="https://www.facebook.com/RunestoneInteractive" data-send="false" data-layout="button_count" data-width="300" data-show-faces="false" data-font="arial"></div>
+              </li>
+
+              <li class="divider"></li>
+              <li>
+                <div>
+                  <b>Help support us:</b>
+                </div>
+                <div class="gittip">
+                  <iframe style="border:0;"
+                    src="https://www.gittip.com/bnmnetp/widget.html"
+                    width="48pt" height="22pt" class="gittip-button">
+                  </iframe>
+                </div>
+                <div>
+                    <form action="https://www.paypal.com/cgi-bin/webscr" method="post" target="_top">
+                  <input type="hidden" name="cmd" value="_s-xclick">
+                  <input type="hidden" name="encrypted" value="-----BEGIN PKCS7-----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-----END PKCS7-----
+                  ">
+                  <input type="image" src="https://www.paypalobjects.com/en_US/i/btn/btn_donate_SM.gif" border="0" name="submit" alt="PayPal - The safer, easier way to pay online!">
+                  <img alt="" border="0" src="https://www.paypalobjects.com/en_US/i/scr/pixel.gif" width="1" height="1">
+                  </form>
+
+                </div>
+              </li>
+          </ul>
+        </li>
+        <!-- end social media dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        <!-- search dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-search" style='opacity:0.9;'></i>
+          </a>
+          <ul class='dropdown-menu'>
+            
+                <li><a href='index.html'>Table of Contents</a></li>
+            
+            <li><a href='/runestone/static/CCOM3033/genindex.html'>Book Index</a></li>
+            <li class="divider"></li>
+            <li id="scratch_ac_link"><a href="javascript:ACFactory.toggleScratchActivecode()">Scratch ActiveCode</a></li>
+            <li class="divider"></li>
+            <li style="width: 240px;">
+              <form class="navbar-search" style="margin:10px;" action="search.html" method="get">
+                <div class="input-group">
+                  <input type="text" class="form-control" name="q" placeholder="Search this book" />
+                  <span class="input-group-btn">
+                    <button class="btn btn-primary" style="margin:0;" type="submit">
+                      <i class="glyphicon glyphicon-search"></i>
+                    </button>
+                  </span>
+                </div><!-- /input-group -->
+                <input type="hidden" name="check_keywords" value="yes" />
+                <input type="hidden" name="area" value="default" />
+              </form>
+            </li>
+          </ul>
+        </li>
+        <!-- end search dropdown -->
+
+        <li class="divider-vertical"></li>
+
+        
+        <li class="divider-vertical"></li>
+
+        <!-- help menu dropdown -->
+        <li class="dropdown">
+          <a class="dropdown-toggle" href="#" data-toggle="dropdown">
+            <i class="glyphicon glyphicon-question-sign" style="opacity:0.9;"></i>
+          </a>
+          <ul class="dropdown-menu user-menu">
+            <li><a href='/runestone/static/CCOM3033/navhelp.html'>Navigation Help</a></li>
+            <li><a href='/runestone/static/overview/instructor.html'>Help for Instructors</a></li>
+            <li class="divider"></li>
+            <li><a href='http://runestoneinteractive.org'>About Runestone</a></li>
+            <li><a href='/runestone/static/help/bugreports.html'>Report A Problem</a></li>
+          </ul>
+        </li>
+        <!-- end help menu dropdown -->
+
+        <li class="divider-vertical"></li>
+
+      </ul>
+
+      <ul class="nav navbar-nav">
+        <li class="divider-vertical"></li>
+        <!--
+          <li class="dropdown">
+  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Page <b class="caret"></b></a>
+  <ul class="dropdown-menu localtoc"><ul>
+<li><a class="reference internal" href="#">Estructuras de repetición: while</a><ul>
+<li><a class="reference internal" href="#validacion-de-inputs-usando-while">Validación de inputs usando while</a></li>
+<li><a class="reference internal" href="#do-while">Do-while</a></li>
+<li><a class="reference internal" href="#hand-tracing">Hand tracing</a></li>
+</ul>
+</li>
+</ul>
+</ul>
+</li>
+          <li class="divider-vertical"></li>
+        
+        
+          
+
+<script type="text/javascript">
+  opts = {'placement':'bottom',
+          'selector': '',
+          'delay': { show: 100, hide: 50}
+         };
+
+  $('#relations-prev').tooltip(opts);
+  $('#relations-next').tooltip(opts);
+</script>
+        -->
+        
+          <li></li>
+        
+      </ul>
+
+    </div>
+  </div>
+</div>
+
+
+<div class="container" id="continue-reading"></div>
+
+<div class="container" id="main-content">
+  
+  <div class="section" id="estructuras-de-repeticion-while">
+<h1>Estructuras de repetición: while<a class="headerlink" href="#estructuras-de-repeticion-while" title="Permalink to this headline">¶</a></h1>
+<p>While es una estructura de repetición que mantiene repitiendo su bloque siempre que la expresión relacional sea cierta.</p>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='0 1 2 3 4 5 6 7 8'  >
+ // Programa Repeticion 1
+ #include <iostream>
+ using namespace std;
+
+ int main() {
+
+     int x;
+
+     cout << "Entre x: ";
+     cin  >> x;
+
+     while ( x < 5 ) {
+         cout << "Entre x: " << endl;
+         cin >> x;
+         cout << endl << "Usted entro: "
+             << x << endl;
+     }
+
+     cout << "Se acabo" << endl;
+     return 0;
+ }
+</textarea>
+
+    <div data-component="reveal" id="revealid1"   data-showtitle="¿Cuando el programa dejará de pedir datos al usuario?" data-hidetitle="Hide">
+    Cuando el usuario entre algun número que <strong>no</strong> sea menor que 5. En otras palabras, cuando el usuario entre un número igual o mayor a 5.
+    </div>
+    <p>La siguiente figura muestra algunas partes importantes del ciclo while.</p>
+<div class="figure align-center">
+<img alt="image" src="_images/while01.png" />
+</div>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''     >
+ // Programa Repeticion 2
+ #include <iostream>
+ using namespace std;
+
+ int main() {
+
+     int n = 1;
+
+     while ( n < 15 ) {
+         cout << n << endl;
+         n = n * 2;
+     }
+
+     cout << "Se acabo" << endl;
+     return 0;
+ }
+</textarea>
+
+    <div data-component="reveal" id="revealid1"   data-showtitle="¿Cuántas iteraciones realiza el while en el programa anterior?" data-hidetitle="Hide">
+    El while realiza 4 iteraciones: la que imprime <code class="docutils literal"><span class="pre">1</span></code>, <code class="docutils literal"><span class="pre">2</span></code>, <code class="docutils literal"><span class="pre">4</span></code> y <code class="docutils literal"><span class="pre">8</span></code>.
+    </div>
+    <p>A la variable(s) que son utilizadas para controlar si un while sigue dando vueltas o no, se le llama <strong>Loop control variable(s)</strong>.</p>
+<ol class="arabic simple">
+<li>En el programa 1, el <strong>LCV</strong> es la variable <code class="docutils literal"><span class="pre">x</span></code>.</li>
+<li>En el programa 2, el <strong>LCV</strong> es la variable <code class="docutils literal"><span class="pre">n</span></code>.</li>
+</ol>
+<p>Todo while bien estructurado debe cumplir con las siguientes criterios:</p>
+<ol class="arabic">
+<li><p class="first">Se debe haber asignado un valor al <strong>LCV</strong> antes del loop.</p>
+<blockquote>
+<div><p>Por ejemplo, en el programa 1, antes de llegar a la instrucción while por primera vez, el <strong>LCV</strong> <code class="docutils literal"><span class="pre">x</span></code> contiene al valor que entró el usuario.</p>
+</div></blockquote>
+</li>
+<li><p class="first">El <strong>LCV</strong> debe utilizarse en una expresión relacional para determinar si el while realiza la próxima iteración.</p>
+<blockquote>
+<div><p>Por ejemplo, en el programa 2, se utiliza la expresión relacional <code class="docutils literal"><span class="pre">n</span> <span class="pre">&lt;</span> <span class="pre">15</span></code> para determinar si el while realiza su próxima iteración.</p>
+</div></blockquote>
+</li>
+<li><p class="first">Dentro del bloque de instrucciones del while se debe actualizar el <strong>LCV</strong>.</p>
+<blockquote>
+<div><p>Por ejemplo, en el programa 1, se actualiza el valor de <code class="docutils literal"><span class="pre">x</span></code> con el valor entrado por el usuario (<code class="docutils literal"><span class="pre">cin</span> <span class="pre">&gt;&gt;</span> <span class="pre">x</span></code>).</p>
+<p>En el programa 2, se actualiza el valor de <code class="docutils literal"><span class="pre">n</span></code> con el resultado de <code class="docutils literal"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">n</span> <span class="pre">*</span> <span class="pre">2</span></code>.</p>
+</div></blockquote>
+</li>
+</ol>
+<p>Una forma recomendada de mejorar nuestras destrezas de programación es estudiar patrones comúnmente utilizados en programas.</p>
+<div class="section" id="validacion-de-inputs-usando-while">
+<h2>Validación de inputs usando while<a class="headerlink" href="#validacion-de-inputs-usando-while" title="Permalink to this headline">¶</a></h2>
+<p><strong>Patrón 1</strong>: Mientras el usuario entre dato(s) inválidos, le seguimos pidiendo.</p>
+<div class="highlight-python"><div class="highlight"><pre>int n;
+
+cout &lt;&lt; &quot;Entre un numero en el rango [5,9]: &quot;;
+cin  &gt;&gt; n;
+
+while ( n &lt; 5 || n &gt; 9) {
+    cout &lt;&lt; &quot;Entre un numero en el rango [5,9]: &quot;;
+    cin  &gt;&gt; n;
+}
+
+cout &lt;&lt; &quot;Gracias.&quot; &lt;&lt; endl;
+</pre></div>
+</div>
+<p>Importante: La expresión relacional del while debe ser <strong>cierta</strong> cuando el dato sea <strong>invalido</strong>.</p>
+<p><strong>Patrón 2</strong>: Acumulemos números hasta que rebasemos cierta cantidad.</p>
+<blockquote>
+<div>Ejemplo: Cuantos recíprocos de enteros positivos debo sumar para llegar a 12 (<span class="math">\(1 + \frac{1/2} + \frac{1/3} + \ldots  &gt;= 12\)</span> )</div></blockquote>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''     >
+ #include <iostream>
+ using namespace std;
+
+ int main() {
+
+     double total = 0;
+     int n = 0;
+
+     while ( total < 12) {
+         n = n + 1;
+         total = total + ( 1.0 / n );
+     }
+
+     cout << "Debemos sumar hasta 1 / " << n << endl;
+
+     return 0;
+ }
+</textarea>
+<p>En el patrón 2 vemos dos técnicas muy importantes en programación:</p>
+<ul class="simple">
+<li>Un contador (<em>n</em> en programa pasado) es una variable que se incrementa o decrementa en la misma cantidad en cada iteración del loop.</li>
+<li>Un acumulador (<em>total</em> en el programa pasado) es una variable que acumula la suma de valores asumidos por otra variable durante las iteraciones de un loop.</li>
+</ul>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='0 10 8 7 1 8 2 3'  >
+ #include <iostream>
+ using namespace std;
+
+ int main() {
+
+     const int CUPO  = 30;
+     double totalEst = 0;
+     int estudiantes = 0;
+
+     cin >> estudiantes;
+     totalEst = estudiantes;
+
+     while ( totalEst < CUPO) {
+         cin >> estudiantes;
+         totalEst = totalEst + estudiantes;
+     }
+
+     cout << "Se lleno la clase con "
+          << totalEst << " estudiantes " << endl;
+
+     return 0;
+ }
+</textarea>
+</div>
+<div class="section" id="do-while">
+<h2>Do-while<a class="headerlink" href="#do-while" title="Permalink to this headline">¶</a></h2>
+<p>Estructura de repetición donde la condición se verifica <strong>al final</strong> de cada iteración.</p>
+<div class="figure align-center">
+<img alt="image" src="_images/dowhile01.png" />
+</div>
+<div class="figure align-center">
+<img alt="image" src="_images/dowhile02.png" />
+</div>
+
+<textarea data-component="activecode" id=lc1 data-lang="cpp"    data-timelimit=25000   data-audio=''   data-stdin='100 0 -5 23 10 19 1'  >
+ #include <iostream>
+ using namespace std;
+
+ int main() {
+
+     int x;
+
+     do {
+
+         cout << "Entre un num en rango [5,15]:";
+         cin  >> x;
+         cout << endl << "Usted entro: " << x << endl;
+
+     } while ( x < 5  || x > 15);
+
+     cout << "Felicidades, sabes seguir instrucciones" << endl;
+
+     return 0;
+ }
+</textarea>
+</div>
+<div class="section" id="hand-tracing">
+<h2>Hand tracing<a class="headerlink" href="#hand-tracing" title="Permalink to this headline">¶</a></h2>
+<p>Técnica utíl para analizar y depurar código.</p>
+<p>Determinar si un número es primo. Supón que escuchaste por ahí que:</p>
+<blockquote>
+<div>Un primo solamente es divisible entre si mismo y uno. Podemos verificar si un entero es primo dividiendo entre todos los números desde 2 hasta la raiz cuadrada del entero. Por ejemplo: 19 es primo por que no es divisible ni por 2, 3, 4,</div></blockquote>
+<p>Vamos a depurar el siguiente pseudocódigo usando hand tracing.</p>
+<div class="highlight-python"><div class="highlight"><pre>Input: n, un entero positivo
+Output: true si es primo
+=================================
+1. d = 2
+2. while ( d &lt; sqrt(n) ):
+3.     if n % d == 0: return false
+4.     d = d + 1
+</pre></div>
+</div>
+</div>
+</div>
+
+
+  
+      
+
+<script type="text/javascript">
+
+  $('#relations-prev').tooltip({'placement':'right', 'selector': '', 'delay': { show: 100, hide: 50}});
+  $('#relations-next').tooltip({'placement':'left', 'selector': '', 'delay': { show: 100, hide: 50}});
+  
+</script>
+  
+</div>
+<footer class="footer">
+  <div class="container">
+    <p class="pull-right">
+      
+      | <a href="#">Back to top</a>
+      
+    </p>
+    <p>
+        &copy; Copyright 2015 director.
+      Created using <a href="http://sphinx.pocoo.org/">Sphinx</a> 1.3.1.
+    </p>
+  </div>
+</footer>
+
+
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-32029811-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+
+
+
+  </body>
+</html>

@@ -1,0 +1,5 @@
+.. activecode:: lc1
+   :language: cpp
+   :stdin: 1000 4
+
+   test.rst

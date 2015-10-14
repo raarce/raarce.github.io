@@ -1,0 +1,376 @@
+..  title:: Overview
+..  shortname:: Test
+
+=====================
+CCOM3033 - B51
+=====================
+
+
+
+Razones por las que usamos funciones en programación
+----------------------------------------------------
+* Permiten organizar nuestro código en pedazos manejables y fáciles de validar. (Te imaginas tener que leer una novela sin capítulos, así sería un programa sin funciones).
+* Permiten separar un programa complejo en pedazos que pueden ser implementados por varios individuos. 
+* Reutilización de código ya implementado sin tener que recurrir a copy paste. (Si no existieran las funciones, tendrías que copiar el código que permite que implementa ``cout`` cada vez que quieres imprimir algo al terminal)
+* Una vez correctamente implementada una función, no podemos olvidar sobre los detalles de como fue implementada y simplemente usarla como caja negra. 
+
+
+.. image:: 
+   _static/headerDVD.png
+
+Pase por valor y por referencia
+-------------------------------
+
+Las funciones en C++ permiten recibir argumentos por valor o por referencia.
+
+Pass by value
+-------------
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+
+   void pm(int a, int b) {
+       if (a >= b) cout << "In pm: " << a << endl;
+       else        cout << "In pm: " << b << endl;
+
+       a = 0;
+       b = 0;
+   }
+
+   int main() {
+       int x, y;
+
+       x = 5; y = 10;
+       pm(x,y);
+
+       cout << "In main: x:" << x << ", y:" << y << endl;
+       
+       return 0;
+   }
+   
+
+
+Pass by value
+-------------
+
+Cada argumento y cada parámetro es una variable distinta. Por esto, las asignaciones de valores a las variables ``a`` y ``b`` no cambian los valores de ``x`` y ``y``.
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+
+   void pm(int a, int b) {
+       cout << "La direccion de a es: " << &a << endl;
+       cout << "La direccion de b es: " << &b << endl;
+
+       a = 35;
+       b = 42;
+   }
+
+   int main() {
+       int x, y;
+
+       x = 5; y = 10;
+
+       cout << "La direccion de x es: " << &x << endl;
+       cout << "La direccion de y es: " << &y << endl;
+
+       pm(x,y);
+
+       cout << "In main: x:" << x << ", y:" << y << endl;
+       
+       return 0;
+   }
+
+
+
+
+Pass by reference
+-----------------
+
+Cuando pasamos una variable como argumento **por referencia**, el parámetro correspondiente hará **referencia** directamente a la variable original. **NO** se copia el valor del argumento a una nueva variable como el caso de pase por valor.
+
+Al correr el siguiente código note que la dirección del parámetro ``a`` es exactamente igual a la variable ``x`` (su argumento correspondiente). Igual sucede con la ``b`` y la ``y``. Por esto, las asignaciones que se hacen a ``a`` y ``b`` afectan los valores de ``x`` y ``y`` de vuelta en main.
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+
+   void pm(int &a, int &b) {
+       cout << "La direccion de a es: " << &a << endl;
+       cout << "La direccion de b es: " << &b << endl;
+
+       a = 35;
+       b = 42;
+   }
+
+   int main() {
+       int x, y;
+
+       x = 5; y = 10;
+
+       cout << "La direccion de x es: " << &x << endl;
+       cout << "La direccion de y es: " << &y << endl;
+
+       pm(x,y);
+
+       cout << "In main: x:" << x << ", y:" << y << endl;
+       
+       return 0;
+   }
+
+
+
+
+Pass by constant reference 
+--------------------------
+
+Cuando pasamos una variable como argumento **por referencia constante**, el parámetro correspondiente hará **referencia** directamente a la variable original. **PERO** la función solo puede **leer** variable, no cambiarla.
+
+En el siguiente código el parámetro ``a`` es tipo constante. El compilador se dará cuenta que estamos tratando de modificar el parámetro ``a`` dentro de la función ``pm`` y arroja un mensaje de error.  
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+
+   void pm(const int &a, int &b) {
+       cout << "La direccion de a es: " << &a << endl;
+       cout << "La direccion de b es: " << &b << endl;
+
+       a = 35;
+       b = 42;
+   }
+
+   int main() {
+       int x, y;
+
+       x = 5; y = 10;
+
+       cout << "La direccion de x es: " << &x << endl;
+       cout << "La direccion de y es: " << &y << endl;
+
+       pm(x,y);
+
+       cout << "In main: x:" << x << ", y:" << y << endl;
+       
+       return 0;
+   }
+
+
+
+Otras técnicas con funciones en C++
+-----------------------------------
+
+Sobrecarga (overloading)
+========================
+
+En C++ podemos crear tantas funciones deseemos con el mismo nombre, siempre y cuando todas tengan una **firma** de parámetros diferente. La firma de parámetros es el número y tipos de parámetros que recibe una función. 
+
+Las siguientes son sobrecargas válidas de la función abs:
+
+.. datafile:: df1
+
+   double abs(double x);
+   int    abs(int x);
+
+
+Las siguientes no son sobrecargas válidas de la función hipotenusa:
+
+.. datafile:: df1
+
+   int  zebra(int x, int y);
+   void zebra(int x, int y);
+
+Cuando el compilador encuentra una invocación a una función sobrecargada, escoge cuál de las versiones usar basandose en el número y tipos de argumentos.
+
+.. datafile:: df1
+
+   int    hipotenusa(int x, int y);
+   double hipotenusa(double x, double y);
+   void   hipotenusa(double x, double y, double &z);
+
+   int main() {
+
+       // . . . .
+
+       z = hipotenusa(11.5, 6.8);
+   }
+
+
+
+Parámetros con valores por defecto (default values)
+===================================================
+
+Los parámetros de una función pueden tener valores defecto que serán asumidos cuando la invocación no incluya valor para el parámetro.
+
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+
+   double gog(double a = 20.0, double b = 15.0) {
+       return a * b / 10.0;
+   }
+
+   int main() {
+       double x, y;
+
+       cout << "Resultado A: " << gog() << endl;
+
+       cout << "Resultado B: " << gog(8.5) << endl;
+
+       x = y = 10.5; 
+       cout << "Resultado C: " << gog(x, y) << endl;
+
+       return 0;
+   }
+
+Detalles:
+
+* El valor defecto se especifica en el prototipo o en el encabezado de la función, pero no en ambos.
+
+* Los parámetros con valores defecto deben ser los parámetros de más a la derecha. Por ejemplo, esto **no** se permite:
+
+.. datafile:: test
+
+   void PrintValue(int nValue1=10, int nValue2); 
+
+
+
+
+Some common C++ funcion mistakes
+--------------------------------
+
+Run the following programs and notice the warnings and/or errors that result. Understanding the error messages will be of help when you are designing your own functions. 
+
+**A non-void function that returns nothing.**
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+
+   int foo() {
+       int radius = 5;
+       int result;
+       result = radius * 9;
+   }
+
+   int main() {
+       int a = foo();
+       cout << "The value of a:" << a << endl;
+       return 0;
+   }
+
+**A non-void function, correctly called, but return value is not used.**
+
+.. activecode:: lc2
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+
+   int fif() {
+       int radius = 5;
+       int result;
+       
+       result = radius * 9;
+
+       return result;
+   }
+
+   int main() {
+       fif();
+       // . . . .
+       return 0;
+   }
+
+
+**A function called with the wrong number of arguments.**
+
+.. activecode:: lc3
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+
+   void foi(int radius) {
+       int result = radius * 3;
+       // . . . 
+   }
+
+   int main() {
+       foi();
+       // . . . .
+       return 0;
+   }
+
+**A function called with an ambiguous argument.**
+
+.. activecode:: lc4
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+
+   double ahoi(double x) {
+       cout << "I am the double version" << endl;
+       return ahoi * 2;
+   }
+
+   float ahoi(float radius) {
+       cout << "I am the float version" << endl;
+       return ahoi * 3;
+   }
+
+   int main() {
+       ahoi(42);
+       // . . . .
+       return 0;
+   }
+
+Self-Check Questions
+--------------------
+
+.. mchoice:: question1_1
+   :correct: b
+   :answer_a: area(10, 9);
+   :answer_b: int d = area(10, 9);
+   :answer_c: area(10)
+   :answer_d: area()
+   :feedback_a: No, a pesar que el número y tipo de argumentos son correctos, el resultado de la función (el return value) no está siendo utilizado.
+   :feedback_b: Si!! La invocación usa la cantidad y tipo de argumentos correctos. Además asigna el resultado de la función a una variable.
+   :feedback_c: No, la función está siendo invocada con un solo argumento y requiere dos.
+   :feedback_d: No, la función está siendo invocada sin argumentos y requiere dos.
+
+   Asuma que existe una función llamada ``int area(int a, int b = 1)``. ¿Cuál de los siguientes es la forma más adecuada de invocarla?
+
+
+
+SECTION 2: An Overview of the extensions
+::::::::::::::::::::::::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 2
+
+   overview.rst
+
+
+SECTION 2: Add more stuff here
+::::::::::::::::::::::::::::::
+
+You can add more stuff here.
+
+

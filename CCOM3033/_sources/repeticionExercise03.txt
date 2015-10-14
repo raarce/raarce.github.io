@@ -1,0 +1,344 @@
+Ejercicio en clase :
+----------------------------------------------------
+
+
+
+Demostración 1: las instrucciones ``break`` y ``continue``
+==========================================================
+
+¿Qué números imprime el siguiente programa?
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   
+   using namespace std;
+   int main() {
+   
+       for (int i = 0; i < 10; i++) {
+           cout << i << " ";
+       }
+       cout << endl << "done" << endl;
+       return 0;
+   }
+
+
+Ahora le añadimos un ``break`` dentro del loop. ¿Qué números imprime? 
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <string>
+   #include <cassert>
+   
+   using namespace std;
+   int main() {
+   
+       for (int i = 0; i < 10; i++) {
+           cout << i << " ";
+           if (i == 6) break;
+       }
+       cout << endl << "done" << endl;
+       return 0;
+   }
+
+
+En el siguiente le añadimos un ``continue`` cuando la variable ``i`` sea igual  3 o 6. ¿Qué números imprime?
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <string>
+   #include <cassert>
+   
+   using namespace std;
+   int main() {
+   
+       for (int i = 0; i < 10; i++) {
+           if (i == 3 || i == 6) continue; 
+           cout << i << " ";
+           
+       }
+       cout << endl << "done" << endl;
+       return 0;
+   }
+
+
+
+A continuación algunas ilustraciones de cómo el break afecta el flujo de las estructuras de repetición.
+
+.. figure:: http://www.programiz.com/sites/tutorial2program/files/working-break.jpg
+   :align: center
+   :alt: image
+   :width: 50%
+
+
+A continuación algunas ilustraciones de cómo el break afecta el flujo de las estructuras de repetición. En la figura del ``for``, la figura sería más ilustrativa si la flecha que sale del continue apuntara al **update expression**. Ahora mismo da la impresión erronea de que el continue regresa a la inicialización del LCV.
+
+.. figure:: http://www.programiz.com/sites/tutorial2program/files/working-continue.jpg
+   :align: center
+   :alt: image
+   :width: 50%
+
+
+
+
+Estructuras de decisión
+==========================================================
+
+Completemos nuestro estudio de las estructuras de decisión...
+
+
+Ejercicio 1
+===========
+
+Modifique el siguiente código para que no incurra en tanta duplicación de instrucciones (y que realice la misma funcionalidad) 
+
+.. activecode:: lc1
+   :language: cpp
+   :stdin: 100
+
+    #include <iostream>
+    
+    using namespace std;
+    int main() {
+    
+        int n = 0;
+        
+        cout << "Entre un numero entre [0,3]: ";
+        cin >> n;
+        cout << "Usted entro: " << n << endl;
+        
+        
+        if (n == 0) {
+            cout << "Hago esto..." << endl;
+            cout << "Habia una vez" << endl;
+            cout << "Hago lo otro...." << endl;
+        }
+        else if (n <= 2) {
+            cout << "Hago esto..." << endl;
+            cout << "Un barco chiquitito" << endl;
+            cout << "Hago lo otro...." << endl;
+     	}
+        else if (n == 3) {
+            cout << "Hago esto..." << endl;
+            cout << "Que no podia navegar" << endl;
+            cout << "Hago lo otro...." << endl;
+     	}
+        else {
+            cout << "Hago esto..." << endl;
+            cout << "Pasaron 1,2,3,4,5,6,7 semanas" << endl;
+            cout << "Hago lo otro...." << endl;
+    	}    
+    }
+
+
+Operador condicional
+====================
+
+Hay muchas ocasiones en que el único efecto de los if-else es asignar uno u otro valor a una variable. Por ejemplo,
+
+.. activecode:: lc1
+   :language: cpp
+   :stdin: 100
+
+    #include <iostream>
+    
+    using namespace std;
+    int main() {
+    
+        int n;
+    
+        cin >> n;
+    
+        if (n < 0) 
+            n = -n; 
+        else
+            n = 42; 
+
+        cout << n << endl;
+    
+        return 0;
+    }
+
+.. reveal:: revealid1
+    :showtitle: ¿Qué valor se le asigna a la n si es negativa?
+
+    Se le asigna su negativo, i.e. el valor positivo.
+
+.. reveal:: revealid1
+    :showtitle: ¿Qué valor se le asigna a la n no es negativa?
+
+    Se le asigna el número 42.
+
+
+Observe que hemos sustituido las lineas 10-13 por una sola línea.
+
+.. activecode:: lc1
+   :language: cpp
+   :stdin: 100
+
+   #include <iostream>
+   
+   using namespace std;
+   int main() {
+   
+       int n;
+   
+       cin >> n;
+   
+       n = n < 0 ? -n : 42;
+
+       cout << n << endl;
+   
+       return 0;
+   }
+
+.. figure:: opCondicional.png
+   :align: center
+   :alt: image
+   :width: 80%
+
+
+Complete la función ``valorAbsoluto``  utilizando un operador condicional para que devuelva lo correcto.
+
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <cassert>
+   using namespace std;
+
+   int valorAbsoluto(int n) {
+       return 0;
+   }
+
+   void test_valorAbsoluto() {
+       assert( valorAbsoluto(0) == 0);
+       assert( valorAbsoluto(9) == 9);
+       assert( valorAbsoluto(-8) == 8);
+   }
+
+   int main() {
+       test_valorAbsoluto();
+       return 0;
+   }
+
+
+
+Las expresiones usando el operador condicional se pueden anidar. Por ejemplo la siguiente expresíon asigna 100, 200 o 300 dependiendo de si n es 1, 2 u otra cosa.
+
+::  
+
+   x = (n == 1) ? 100 : (n == 2) ? 200 : 300; 
+
+
+Complete la función ``foo`` utilizando un operador condicional para que la función devuelva 0 si *n* es negativa, 100 si *n* es mayor de 100, o *n* si esta en el rango [0,100]. 
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <cassert>
+   using namespace std;
+
+   int foo(int n) {
+       return 0;
+   }
+
+   void test_foo() {
+       assert( foo(0) == 0);
+       assert( foo(100) == 100);
+       assert( foo(-8) == 0);
+       assert( foo(101) == 100);
+   }
+
+   int main() {
+       test_foo();
+       return 0;
+   }
+
+
+
+Switch-Case
+============
+
+C++ tiene una estructura de decisión adicional que es particularmente adecuada para situaciones donde queremos basar el flujo de nuestro programa en el valor de una variable entera o de tipo int.
+
+El siguiente programa muestra esa estructura en acción.  El propósito del programa es imprimir el nombre del número.
+
+.. activecode:: lc1
+   :language: cpp
+   :stdin: 100
+
+   #include <iostream>
+   #include <string>
+   #include <cassert>
+   
+   using namespace std;
+   int main() {
+   
+       int n;
+   
+       cin >> n;
+   
+       switch(n) {
+           case 0: 
+               cout << "Cero" << endl;
+               break;
+           case 1: 
+               cout << "Uno" << endl;
+               break;
+           case 2: 
+               cout << "Dos" << endl;
+               break;
+           default:
+               cout << "Fuera de rango" << endl;
+               break;
+       }
+   
+       return 0;
+   }
+
+.. reveal:: revealid1
+    :showtitle: ¿Por qué usamos un break luego del bloque de código en cada uno de los casos?
+
+	Porque los break son la forma de terminar cada caso. Si no lo ponemos, se continuan ejecutando las instrucciones del próximo caso. Por ejemplo, si quitas  el break que aparece en el caso 1 (en la línea) y el usuario entra ``1``, entonces saldra impreso ``Uno Dos``. 
+
+.. reveal:: revealid1
+   :showtitle: ¿Qué pasa si ``n`` asume un valor que no esta contemplado en ninguno de los ``case``?
+
+    Se ejecuta el bloque de instrucciones bajo el caso ``default``.
+
+.. reveal:: revealid1
+   :showtitle: ¿Qué pasa si no incluimos una caso ``default``?
+
+    Si no incluyes caso default, si la variable asume un valor no contemplado en ninguno de los casos, entonces no se ejecuta **ninguno de los casos** del switch-case.
+
+
+
+
+Leyendo datos de un archivo
+===========================
+
+
+* ``#include<fstream>``: es el header file donde están definidas las clases ``ifstream`` y ``ofstream``.
+
+* ``ifstream`` : clase para archivos de entrada
+* ``ofstream`` : clase para archivos de salida 
+* ``inputFile.open("thefilename")``: para abrir el file
+* ``inputFile.fail()``: para determinar si hubo problemas al abrirlo
+* ``>>`` : operador que se usa en conjunto al objeto de clase ``ifstream`` para leer datos del file.
+* ``<<`` : operadore que se usar en conjunto al objeto de clase ``ofstream`` para escribir datos al file.
+* ``inputFile.close()``: cierra el file debidamente.
+
+* Fortunately, the ``>>`` operator not only reads data from a ``file``, but also returns a ``true`` or ``false`` value indicating whether the data was successfully read or not. 
+
+* If the operator returns ``true``, then a value was successfully read. If the operator returns ``false``, it means that no value was read from the file.
+
+
+

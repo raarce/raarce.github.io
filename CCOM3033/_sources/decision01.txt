@@ -1,0 +1,221 @@
+Estructuras de decisión
+-----------------------
+
+* if 
+* if-else
+* if-else anidados
+* if-else if
+* conditional operator
+* switch case
+
+Las estructuras de decisión deciden si ejecutar un bloque del programa u otro dependiendo del resultado de una **expresión relacional**
+
+:: 
+
+	int edad;
+	cin >> edad;
+	if ( edad >= 18 ) {
+		cout << "Mayor de edad " << endl;
+	}
+
+Los operadores de comparación en C++
+
+========= ======================== ========
+Operación Significa                Negado
+========= ======================== ========
+x > y     x es mayor que y         x <= y
+x >= y    x es mayor o igual a y   x < y
+x < y     x es menor que y         x >= y
+x <= y    x es menor o igual a y   x > y
+x == y    x es igual a y           x != y
+x != y    x no es igual a y        x == y
+========= ======================== ========
+
+Es importante saber el negado de las comparaciones para entender en que casos se ejecutan el **if** y el **else**. Por ejemplo, 
+
+:: 
+
+    int x;
+
+    cin >> x; 
+
+    if (x > 25) {
+        // BLOQUE A
+        cout << "Cucara" << endl;
+    }
+    else {
+        // BLOQUE B
+        cout << "Macara" << endl;
+    }
+
+    // BLOQUE C
+    cout << "Titere" << endl;
+
+
+.. reveal:: revealid1
+    :showtitle: ¿Qué valores de x hacen que se ejecute bloque A?
+
+    El bloque A se ejecuta cuando **x es mayor que 25**.
+
+.. reveal:: revealid2
+    :showtitle: ¿Qué valores de x hacen que se ejecute bloque B?
+
+    El bloque B se ejecuta cuando **x es menor o igual que 25**.
+
+
+.. reveal:: revealid3
+    :showtitle: ¿Qué valores de x hacen que se ejecute bloque C?
+
+    El bloque C se ejecuta **independiente del valor de x**.
+
+
+El siguiente código es equivalente al anterior.
+
+:: 
+
+    if (x <= 25) {
+        // BLOQUE B
+        cout << "Macara" << endl;
+    }
+    else {
+        // BLOQUE A
+        cout << "Cucara" << endl;
+    }
+
+    // BLOQUE C
+    cout << "Titere" << endl;
+
+
+
+
+
+Operadores booleanos
+====================
+
+Cuando una expresión relacional depende de más de una comparación o valor booleano debemos usar operadores booleanos entre ellas.
+
+``x >= 25 && x =< 67``: x está entre 25 (inclusive) y 67 (inclusive) 
+
+``25 =< x =< 67``: syntax error!! 
+
+========== ============================================== =====================
+Operación  Significa                                      Negado
+========== ============================================== =====================
+``x && y`` ``true`` solo cuando x y y son `true`          ``!x || !y``
+``x || y`` ``true`` cuando x o y son `true` x < y         ``!x && !y``
+``x ^ y``  ``true`` cuando x o y son `true` pero no ambas ``x && y || !x && !y``
+``!x``     ``true`` cuando x es `false`                   ``x``
+========== ============================================== =====================
+
+
+:: 
+
+    if (x < 0 && x > 25) {
+        // BLOQUE A
+        cout << "Cucara" << endl;
+    }
+    else {
+        // BLOQUE B
+        cout << "Macara" << endl;
+    }
+
+
+.. reveal:: revealid2
+    :showtitle: ¿Qué valores de x hacen que se ejecute bloque B?
+
+    El bloque B se ejecuta cuando x es **mayor o igual a 0 Y menor igual a 25**.
+
+
+Else if
+=======
+
+Para situaciones donde necesitamos que escoger entre más de un bloque basado en comparaciones sobre la(s) misma(s) variables. Por ejemplo, dado la edad imprimir ``"menor de edad``, ``"mayor de edad"`` o ``"senior citizen"`` si tiene entre [0,17], [18,65], [65,130]. 
+
+Cuidado con código muerto. Codigo que nunca se ejecutará pues su condición nunca se va a cumplir (por su posición en el if-elseif):
+
+::
+
+    if (nota >= 90) cout << "A" << endl;
+    else if (nota >= 70) cout << "C" << endl;
+    else if (nota >= 80) cout << "B" << endl;
+    else if (nota >= 60) cout << "D" << endl;
+    else cout << "F" << endl;
+
+
+::
+
+     if (x > 10 && x < 4 ) cout << "Rumba" << endl;
+     else                  cout << "Candombe" << endl;
+
+
+If anidados
+===========
+
+Una estructura de decisión dentro de otra. 
+
+::
+
+    if (state == "PR") {
+        if (edad >= 18) 
+          cout << "Puede comprar alcohol" << endl;
+        else 
+          cout << "No puede comprar alcohol" << endl;
+    }
+    else {
+        if (edad >= 21)
+          cout << "Puede comprar alcohol" << endl;
+        else 
+          cout << "No puede comprar alcohol" << endl;
+    }
+
+
+Validación de input
+===================
+
+Determinar si el(los) valor(es) entrados por el usuario son válidos para la aplicación.
+
+¿Qué rangos de valores serían válidos para las siguientes variables?
+* edad (en años, para una aplicación en un hospital)
+* estatura (en pulgadas, para una aplicación en escuelas)
+* temperatura (para una aplicación de bosques)
+
+Operador condicional
+====================
+
+::
+    
+    if (expresion relacional)
+        x = un valor o expresión;
+    else 
+        x = otro valor o expresión
+
+
+El operador condicional es una manera resumida de expresar ese tipo de estructuras de decisión.
+
+::
+
+    x = expresion relacional ? valor : otro valor
+
+Flags
+=====
+
+Un flag es una variable Booleana o entera que avisa cuando existe cierta condición.
+
+::
+
+        if (sales >= QUOTA_AMOUNT)
+               salesQuotaMet = 1;
+            else
+               salesQuotaMet = 0;
+
+        if (salesQuotaMet)
+            cout << "You get your commission";
+
+
+Es util cuando las condiciones para determinar `true` son múltiples.
+Piensa en ejemplo....
+
+
+
+
+

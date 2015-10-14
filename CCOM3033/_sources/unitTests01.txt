@@ -1,0 +1,165 @@
+=====================
+CCOM3033 - B51
+=====================
+
+Pruebas unitarias
+-----------------
+
+* ¿Cómo validamos funciones para asegurar que devuelve resultados correctos?
+    * a mano ``:-(``
+    * usando pruebas *automáticas*
+
+* **Unit test**: un función que realiza pruebas a otra función. 
+* Las pruebas son similares a las que hariamos a mano, i.e. proveer inputs a la función y verificar que lo devuelto sea lo esperado.
+* La manera más elemental de realizar estas pruebas es usando la función ``assert(bool)``
+
+La función assert
+=================
+
+* tiene un solo parámetro de tipo ``bool``
+* si recibe un argumento ``true``: permite que el programa siga ejecutando
+* si recibe un argumento ``false``: aborta el programa y reporta la linea donde ocurrió la llamada.
+
+
+¿Cómo la usamos?
+=================
+
+* Imagine una función que recibe tres enteros ``mayor(int, int, int)`` y debe devolver el mayor de ellos? ¿Cómo realizarías pruebas para determinar que devuelve lo correcto?
+
+* Debes realizar pruebas que sean representativas de las múltiples resultados que podría dar la función.
+
+============================ ======================== 
+              **Argumentos**   **Resultado Esperado** 
+============================ ======================== 
+              ``0, -1, -2``                      ``0`` 
+            ``-10, -1, -2``                     ``-1``
+            ``-10, -1,  2``                     ``2``             
+============================ ======================== 
+
+
+
+
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <cassert>
+   using namespace std;
+
+   // Dado tres enteros, devuelve el mayor de ellos
+   int mayor(int a, int b, int c) {
+       int result;
+       // . . . un computo milagroso
+       return result;
+   }
+
+   // Unit test para la funcion mayor
+   void test_mayor() {
+       assert( mayor(0,-1,-2)   == 0 );
+       assert( mayor(-10,-1,-2) == -1 );
+       assert( mayor(-10,-1,2)  == 2 );       
+       cout << "funcion mayor paso todas las pruebas!" << endl;
+   }
+
+   int main() {
+       test_mayor();
+
+       // otras invocaciones a mayor
+
+       return 0;
+   }
+
+
+Ejercicio
+---------
+
+Digamos que un compañero te dice que ha creado una función con el siguiente prototipo y documentación.
+
+:: 
+
+     // Dado un entero positivo, devuelve true si es primo,
+     // false de lo contrario.
+
+     bool esPrimo(unsigned int n); 
+
+.. figure:: primes.jpg
+   :align: center
+   :alt: image
+   :width: 50%
+
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <cassert>
+   #include <cmath>
+   using namespace std;
+
+   // Dado un entero positivo, devuelve true si es primo,
+   // false de lo contrario.
+
+   bool esPrimo(unsigned int n) {
+       for (unsigned int div = 2; div < sqrt(n); div++) {
+           if (n % div == 0) return false;
+       }
+       return true;
+   } 
+
+   int main() {
+
+       // otras invocaciones... 
+
+       return 0;
+   }
+
+
+
+Recuerda
+========
+
+#. Las pruebas deben incluir casos representativos de los resultados que debe devolver la función.
+
+
+Otro ejemplo
+============
+
+Crear una función de prueba unitaria para validar la función ``int cuadrante(int, int)``.
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <cassert>
+   #include <cmath>
+   using namespace std;
+
+   // Dado una coordenada x, y devuelve el cuadrante donde se encuentra, i.e.
+   // un numero entero en el rango [1,4]
+   // Si es un punto en alguno de los ejes, devuelve 0.
+
+   int cuadrante(int x, int y) {
+       if (x == 0 || y == 0) return 0;
+       else if (x > 0) {
+           if (y > 0) return 1;
+           else       return 4;
+       }
+       else  {
+           if (y > 0) return 2;
+           else       return 3;
+       }
+   } 
+
+   int main() {
+
+       // otras invocaciones... 
+
+       return 0;
+   }
+
+
+
+
+
+

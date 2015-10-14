@@ -1,0 +1,385 @@
+Ejercicio en clase : Estructuras de repetición while
+----------------------------------------------------
+
+Trabaje los siguientes ejercicios con su compañero(a) al estilo *pair programmming*, i.e. asumiemndo roles de conductor y navegador, usando una sola computadora, intercambiando roles cada cierto tiempo.
+
+Al final deben someter a moodle todas las contestaciones a las preguntas que aparecen en los ejercicios, así como los códigos. Sugiero que según les funcionen los códigos los copien a un editor de texto para que no lo vayan a perder. Esta página no guarda código, solo sirve como interface para compilar sin tener que salir del navegador. 
+
+Ejercicio 0
+===========
+
+Considere el siguiente programa:
+
+::
+
+    int x = 1;
+
+    while ( x < 7 ) {
+        cout << x << " ";
+        x = x + 1;
+    }
+    cout << endl;
+
+.. reveal:: revealid1
+    :showtitle: ¿Cuál es el loop control variable. ? 
+
+    El loop control variable es ``x``.
+
+.. reveal:: revealid1
+    :showtitle: ¿Cuál el valor inicial del LCV ? 
+
+    El valor inicial de x es ``1``.
+
+.. reveal:: revealid1
+    :showtitle: ¿Bajo que condición el while sigue iterando? 
+
+    El while sigue iterando siempre que `x < 7`.
+
+.. reveal:: revealid1
+    :showtitle: ¿Cómo se actualiza el LCV en cada iteración? 
+
+    El LCV se incrementa en 1 en cada iteración (``x = x + 1``).
+
+
+.. reveal:: revealid1
+    :showtitle: ¿Cuál es el output del programa? 
+
+    1 2 3 4 5 6
+    
+
+
+
+Ejercicio 1
+===========
+
+Usando como inspiración el ejercicio 0, complete el siguiente programa para que que imprima la secuencia de números 2, 7, 12, 17, ..., 102.
+
+
+.. activecode:: lc1
+   :language: cpp
+
+    #include <iostream>
+    using namespace std;
+
+    int main() {
+
+        int x = 1;
+
+        while ( x < 7 ) {
+            cout << x << " ";
+            x = x + 1;
+        }
+
+        cout <<  endl;
+        return 0;
+    }
+
+Cuando haya logrado la operación correcta del código, recuerde copiarlo al documento que someterá al finalizar los ejercicios.
+
+Ejercicio 2
+===========
+
+¿Qué le pasa a este programa? Su autor lo creó para que genere los números desde [0,100] en pasos de 2. 
+Córralo en su versión original para que vea lo que pasa. Luego corríjalo.
+
+.. activecode:: lc1
+   :language: cpp
+
+    #include <iostream>
+    using namespace std;
+
+    int main() {
+
+        int x = 0;
+
+        while ( x > 100 ) {
+            cout << x << " ";
+            x = x + 2;
+        }
+
+        cout <<  "Se acabo" << endl;
+        return 0;
+    }
+
+Cuando haya logrado la operación correcta del código, recuerde copiarlo al documento que someterá al finalizar los ejercicios.
+
+
+Ejercicio 3
+===========
+
+Considere el siguiente programa:
+
+::
+
+    int i = 1;
+    int z = 0;
+
+    while ( i <= 7 ) {
+        i = i + 1;
+        z = z + i;
+    }
+    cout << z << endl;
+
+Haga *hand tracing* al programa.
+
+**Pregunta 1** El programa contiene una variable que actua como **contador**, ¿cuál es?
+
+**Pregunta 2** El programa contiene una variable que actua como **acumulador**, ¿cuál es?
+
+**Pregunta 3** ¿Cuál es el output del programa?
+
+**Pregunta 4** ¿Cuál de las siguientes describe mejor el propósito del programa?
+
+a. Imprimir los números desde el 1 hasta el 7. 
+
+b. Calcular la sumatoria de los numeros enteros desde 1 hasta 7
+
+c. Determinar la cantidad de primos entre 1 y 7.
+
+d. Suma los números enteros desde el 2 al 8.
+
+
+
+
+Ejercicio 4
+===========
+
+
+Usando el pasado programa como inspiración, complete a continuación la función ``sumatoria`` que recibe dos enteros a y b (donde a<=b) y devuelve la sumatoria de números entre ellos.  Ya hemos creado un unit test para que valide su función.
+Cuando su función esté correcta, la ejecución del programa simplemente dirá ``"Paso todas la pruebas!!!"``
+
+.. activecode:: lc1
+   :language: cpp
+
+    // Programa Repeticion 1
+    #include <iostream>
+    #include <cassert>
+    using namespace std;
+
+    unsigned int sumatoria(int a, int b) {
+        // SU CODIGO AQUI
+    }
+
+    void test_sumatoria() {
+        assert(sumatoria(3,3) == 3);
+        assert(sumatoria(10,12) == 33);
+        assert(sumatoria(1,99) == 4950);
+        cout << "Paso todas la pruebas!!!" << endl;
+    }
+
+    int main() {
+        test_sumatoria();
+        return 0;
+    }
+
+
+Cuando haya logrado la operación correcta del código, recuerde copiarlo al documento que someterá al finalizar los ejercicios.
+
+
+Ejercicio 5
+===========
+
+¿Cuál es el output del programa?
+
+::
+
+    int i = 10;
+
+    while ( i >= 0 ) {
+        cout << i << "  ";
+        i = i - 1;
+    }
+
+    cout << endl;
+
+Copie el resultado al documento que someterá al finalizar los ejercicios.
+
+
+
+Ejercicio 6
+===========
+
+Podemos usar los valores generados por el contador en un while para accesar los elementos de un string uno por uno. Observe el siguiente programa.
+
+
+.. activecode:: lc1
+   :language: cpp
+
+    // Programa Repeticion 1
+    #include <iostream>
+    #include <string>
+    using namespace std;
+
+    void unoAuno(const string &st) {
+        unsigned int i = 0;
+
+        while ( i < st.length() ) {
+            cout << "indice " << i << " : " 
+                 << st[i] << endl;
+            i = i + 1;
+        }
+        
+        cout << endl;
+    }
+
+    int main() {
+        unoAuno("calabaza");
+        return 0;
+    }
+
+**Pregunta 1** ¿Cuál es el *loop control variable*?
+
+**Pregunta 2** ¿Qué valores asume el LCV a través del programa?
+
+**Pregunta 3** ¿Por qué generamos esos valores, en vez de ``1`` hasta ``length()`` (inclusive)?
+
+Copia las contestaciones al documento que someteras al finalizar los ejercicios.
+
+
+
+Ejercicio 7
+===========
+
+Ejecuta el siguiente programa para que entiendas cómo funciona el método ``append`` de la clase ``string``.
+
+
+.. activecode:: lc1
+   :language: cpp
+
+    #include <iostream>
+    #include <string>
+    using namespace std;
+
+    int main() {
+        string st = "";
+
+        st.append("uni");
+        st.append(3,'c');
+        st.append("ornio");
+
+        cout << st << endl;
+        return 0;
+    }
+
+
+Como ves ``append`` puede recibir de argumento un caracter o un string y lo añade al final del objeto invocante. Si es un caracter, debe ser precedido por la cantidad de veces que deseas que sea añadido ``st.append(3,'c');``.
+
+Copia el resultado al documento que someteras al finalizar los ejercicios.
+
+Ejercicio 7
+===========
+
+Complete a continuación la función ``reverse`` que recibe un string st y devuelve su string inverso.  Ya hemos creado un unit test para que valide su función.
+
+.. activecode:: lc1
+   :language: cpp
+
+    #include <iostream>
+    #include <cassert>
+    #include <string>
+
+    using namespace std;
+
+    string reverse(const string &st) {
+        // SU CODIGO AQUI
+    }
+
+    void test_reverse() {
+        assert(reverse("raton") =="notar");
+        assert(reverse("racecar") == "racecar");
+        assert(reverse("  ->") == ">-  ");
+        assert(reverse("01234") == "43210");
+
+        cout << "Paso todas la pruebas!!!" << endl;
+    }
+
+    int main() {
+        test_reverse();
+        return 0;
+    }
+
+Cuando haya logrado la operación correcta del código, recuerde copiarlo al documento que someterá al finalizar los ejercicios.
+
+
+
+Ejercicio 8
+===========
+
+El siguiente programa demuestra una función que devuelve el número de divisores de un entero. Por ejemplo, 
+
+
+.. activecode:: lc1
+   :language: cpp
+
+    #include <iostream>
+    using namespace std;
+
+    int numOfDivisors(unsigned int n) {
+        unsigned int d = 1;
+        unsigned int ctr = 0;
+        while (d <= n) {
+            if (n % d == 0) {
+                ctr = ctr + 1;
+            } 
+            d = d + 1;
+        }
+        return ctr;
+    }
+
+
+    int main() {
+        cout << "El numero 35 tiene " 
+             << numOfDivisors(35) << " divisores." 
+             << endl;
+
+        cout << "El numero 144 tiene " 
+             << numOfDivisors(144) << " divisores." 
+             << endl;
+
+        return 0;
+    }
+
+**Pregunta 1** ¿Cuales son los dos contadores en la función ``numOfDivisors``.
+
+**Pregunta 2** ¿Cuál de ellos se actualiza en cada iteración?.
+
+**Pregunta 3** ¿Cuál de ellos se actualiza solo en ciertas iteraciones?.
+
+
+Copia el resultado al documento que someteras al finalizar los ejercicios.
+
+
+Ejercicio 9
+===========
+
+Un numero perfecto es un entero positivo que es igual a la suma de sus divisores positivos sin incluir a si mismo. Por ejemplo 6 es un número perfecto ya que sus divisores (exluyendo a si mismo) son 1, 2, y 3 y su suma da 6. Otro número perfecto es 28 ya que la suma de 1, 2, 4, 7, 14 es 28.
+
+.. activecode:: lc1
+   :language: cpp
+
+    #include <iostream>
+    #include <cassert>
+    #include <string>
+
+    using namespace std;
+
+    bool isPerfect(unsigned int n) {
+        
+    }
+
+    void test_isPerfect() {
+        assert(isPerfect(6) == true);
+        assert(isPerfect(1) == false);
+        assert(isPerfect(28) == true);
+        assert(isPerfect(100) == false);
+        assert(isPerfect(496) == true);
+        cout << "Paso todas la pruebas!!!" << endl;
+    }
+
+    int main() {
+        test_isPerfect();
+        return 0;
+    }
+
+Cuando haya logrado la operación correcta del código, recuerde copiarlo al documento que someterá al finalizar los ejercicios.
+

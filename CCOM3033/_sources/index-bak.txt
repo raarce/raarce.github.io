@@ -1,0 +1,28 @@
+=====================
+CCOM3033 - Páginas de práctica
+=====================
+
+.. Here is were you specify the content and order of your new book.
+
+
+SECTION 1: Funciones
+:::::::::::::::::::::::
+
+
+
+
+SECTION 2: An Overview of the extensions
+::::::::::::::::::::::::::::::::::::::::
+
+.. toctree::
+   :maxdepth: 2
+
+   overview.rst
+
+
+SECTION 2: Add more stuff here
+::::::::::::::::::::::::::::::
+
+You can add more stuff here.
+
+

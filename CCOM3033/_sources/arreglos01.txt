@@ -1,0 +1,268 @@
+Arreglos
+--------
+
+Los arreglos son variables que nos permiten guardar múltiples valores del mismo tipo. A cada uno de los valores se les asigna un indice comenzando desde 0 hasta n-1 donde *n* en el número elementos que tiene el arreglo.
+
+
+El siguiente código crea un arreglo de 4 elementos de tipo entero y les asigna 15, 30, 10, 20, sucesivamente. Luego imprime el contenido del elemento con índice 0.
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+   
+   int main() {
+       int A[4] = {15, 30, 10, 20};
+       
+       cout << "El elemento 0 de A es: " << A[0] << endl;
+       
+       return 0;
+   }
+
+.. reveal:: revealid1
+    :showtitle: ¿Cuál es la instrucción que define el arreglo? 
+
+    Es la instrucción que dice "int A[4] ...." 
+
+.. reveal:: revealid1
+    :showtitle: ¿Cuál es el valor de A[3]? 
+
+    El elemento de A con indice 3 tiene valor de 20.
+
+
+.. reveal:: revealid1
+    :showtitle: ¿Cuál es el tamaño de A? 
+
+    El tamaño de A es 4, pues fue declarado para poder almacenar 4 elementos de tipo int.
+
+Modifica el siguiente código para crear un arreglo llamado B de tres elementos **double**. Los valores de los elementos serán: 4.5, 7.1, 9.9. 
+
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+   
+   int main() {
+       int B[4] = {15, 30, 10, 20};
+       
+       cout << "El elemento 0 de B es: " << B[0] << endl;
+       cout << "El elemento 1 de B es: " << B[1] << endl;
+       cout << "El elemento 2 de B es: " << B[2] << endl;
+       
+       return 0;
+   }
+
+
+Cuando deseamos realizar una operación sobre todos los elementos de un arreglo usamos estructuras de repetición que generen los indices de todos los elementos del arreglo.
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+   
+   int main() {
+       int B[4] = {15, 30, 10, 20};
+       
+       for (unsigned int i = 0; i < 4; i++) {
+           cout << B[i] << " ";
+       }
+
+       cout << endl;
+       
+       return 0;
+   }
+
+
+Modifique el siguiente prorgrama para que imprima todos los valores del arreglo C.
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+   
+   int main() {
+       int C[10] = {15, 30, 10, 20, 30, 8, 16, 32, 64, 128};
+       
+       for (unsigned int i = 0; i < 4; i++) {
+           cout << B[i] << " ";
+       }
+
+       cout << endl;
+       
+       return 0;
+   }
+
+
+Las estructuras de repetición también se pueden usar para modificar todos los elementos de un arreglo. Considere el siguiente código:
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+   
+   int main() {
+       int D[10] = {15, 30, 10, 20, 30, 8, 16, 32, 64, 128};
+       
+       for (unsigned int i = 0; i < 4; i++) {
+           D[i] = D[i] / 10;
+       }
+
+       cout << endl;
+       
+       return 0;
+   }
+
+**Pregunta 1**: ¿Qué cambio realiza el código a cada uno de los elementos del arreglo ``D``?
+
+**Pregunta 2**: Añade un for loop que imprima los valores de ``D`` (luego que han sido modificados).
+
+
+
+Has hand tracing al siguiente código para que entiendas su propósito.
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+   
+   int main() {
+       int E[4] = {10, 7, 11, 1};
+       int t = 0;
+       
+       for (unsigned int i = 0; i < 4; i++) {
+           t = t + E[i];
+       }
+
+       cout << t << endl;
+       
+       return 0;
+   }
+
+
+**Pregunta 1** ¿Cuál de las siguientes describe mejor el código:
+
+a. Halla la sumatoria de los números del arreglo
+b. Halla el promedio de los números del arreglo
+c. Halla la sumatoria de los números 0 + 1 + 2 + 3 + 4
+
+
+
+El siguiente código demuestra cómo se pasa un arreglo como argumento a una función. 
+
+.. activecode:: lc2
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+
+   // Funcion sumalos:
+   // Dado un arreglo A y su tamaño devuelve la suma 
+   // de sus elementos.
+
+   int sumalos(int A[], int size) {
+       int total = 0;
+       
+       for (int i = 0; i < size; i++) {
+           total = total + A[i];
+       }
+       
+       return total;
+   }
+   
+   int main() {
+       int E[4] = {10, 7, 11, 1};
+
+       cout << sumalos(E, 4) << endl;
+       
+       return 0;
+   }
+
+
+.. reveal:: revealid1
+  :showtitle: ¿Cuántos parametros recibe la función sumalos? 
+
+  Recibe 2 parámetros: una referencia al arreglo y el tamaño
+  del arreglo. 
+
+Dado que los arreglos son pasados por referencia, podemos modificar sus elementos dentro de la función.
+
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   using namespace std;
+
+   // Funcion sumaleUno:
+   // Dado un arreglo A y su tamaño le añade uno
+   // a cada elemento.
+
+   void sumaleUno(int A[], int size) {
+       
+       for (int i = 0; i < size; i++) {
+           A[i] = A[i] + 1;
+       }
+   }
+   
+   int main() {
+       int E[4] = {10, 7, 11, 1};
+
+       cout << "Antes de invocar la funcion:" << endl;
+       for (int i = 0; i < 4; i++) 
+           cout << E[i] << " ";
+       cout << endl;
+
+       sumaleUno(E, 4);
+
+       cout << "Despues de invocar la funcion:" << endl;
+       for (int i = 0; i < 4; i++) 
+           cout << E[i] << " ";
+       cout << endl;
+
+       
+       return 0;
+   }
+
+
+.. reveal:: revealid1
+   :showtitle: ¿Qué hacer si queremos pasar un arreglo que no sea modificable por la función? 
+
+    Usamos la palabra reservada const. Así int sumalos(const int A[], int size).
+
+
+Modifica el siguiente código para que la función devuelva el elemento menor. 
+
+.. activecode:: lc1
+   :language: cpp
+
+   #include <iostream>
+   #include <cassert>
+   using namespace std;
+
+   // Funcion elementoMenor:
+   // Dado un arreglo A y su tamaño devuelve el 
+   // valor del elemento minimo.
+
+   int elementoMenor(const int A[], int size) {
+       
+   }
+   
+   void test_elementoMenor() {
+       int A[] = {9, 3, -1, 10, 11, 0};
+       assert( elementoMenor(A, 6) == -1 );
+   }
+
+   int main() {
+       test_menor();
+       return 0;
+   }
+
+
+
